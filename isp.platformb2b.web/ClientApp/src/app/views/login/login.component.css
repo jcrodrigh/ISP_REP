@@ -1,0 +1,34 @@
+h1
+{
+  text-align: center;
+}
+
+.panel_lateral
+{
+  position: relative 
+}
+
+.cuerpo_panel_lateral 
+{
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+#terminos_condiciones 
+{
+  font-size: 13px!important;
+  line-height: 1.5!important;
+  color: black !important;
+}
+
+#ingrese_cuenta
+{
+  font-size: 15px !important;
+  line-height: 19px !important;
+  color: #111 !important;
+  font-weight: 645 !important;
+}

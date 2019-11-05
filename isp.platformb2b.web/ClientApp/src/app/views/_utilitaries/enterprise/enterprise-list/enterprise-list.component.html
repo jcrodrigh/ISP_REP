@@ -1,0 +1,13 @@
+
+<div class="box">
+    <h2>
+        Sociedad Cliente
+    </h2>    
+    <ul>
+        <li *ngFor="let ent of List_Enterprice" 
+            [ngClass]="include_trucho(ent.ruc_empresa)? 'active': '' "
+            (click) = "clickInItem (ent.ruc_empresa)">
+            {{ent.ruc_empresa}} - {{ent.razon_social}}
+        </li>        
+    </ul>
+</div>

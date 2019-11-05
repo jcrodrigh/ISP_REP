@@ -1,0 +1,21 @@
+ul{
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+ 
+}
+
+ul li 
+{
+  margin-top: 5px;
+}
+ul span{
+  margin-left: 0;
+  text-align: left;
+}
+
+ul li ul
+{
+  margin-left:8%;
+}

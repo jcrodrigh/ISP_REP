@@ -1,0 +1,210 @@
+<document-card #UploadImage></document-card>
+
+<br>
+
+<form>
+  
+
+  <div  class="table-responsive">
+    <table class="table table-striped  header-color">
+      <thead>
+      <tr>
+        <!-- <th scope="col">#</th>
+        <th sortable="monto_total" scope="col" (sort)="onSort($event)">Country</th>
+        <th scope="col" sortable="fecha_emision" (sort)="onSort($event)">Area</th>
+        <th scope="col" sortable="ruc_empresa_cliente" (sort)="onSort($event)">Population</th> -->
+        <th scope="col" sortable="id_tipo_documento_estado" (sort)="onSort($event)">Estado</th>
+        <th scope="col" sortable="usuario_verificacion" (sort)="onSort($event)">Usuario</th>
+        <th scope="col" sortable="id_interno" (sort)="onSort($event)">ID</th>
+        <th scope="col" sortable="fis_elec" (sort)="onSort($event)"  [hidden]="ivm_flag">Tipo Emis.</th> 
+        <th scope="col" sortable="id_tipo_documento" (sort)="onSort($event)">Tipo Doc.</th>
+        <th scope="col" sortable="num_serie" (sort)="onSort($event)">N° Serie</th>
+        <th scope="col" sortable="num_correlativo" (sort)="onSort($event)" style="min-width: 130px;">N° Comprob. Pago</th>        
+        
+        <th scope="col" sortable="fecha_emision" (sort)="onSort($event)" [hidden]="ivm_flag">Fecha Emisión</th>
+        <th scope="col" sortable="ruc_empresa_cliente" (sort)="onSort($event)" [hidden]="ivm_flag">RUC Proveedor</th> 
+        <th scope="col" sortable="razon_social_cliente" (sort)="onSort($event)" [hidden]="ivm_flag">Nombre Proveedor</th>
+        <th scope="col" sortable="ruc_empresa_cliente" (sort)="onSort($event)" [hidden]="!ivm_flag">RUC Cliente</th> 
+        <th scope="col" sortable="razon_social_cliente" (sort)="onSort($event)" [hidden]="!ivm_flag">Nombre Cliente</th>
+        <th scope="col" sortable="id_tipo_moneda" (sort)="onSort($event)">Mon</th>
+        <th scope="col" sortable="monto_total" (sort)="onSort($event)">Monto Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let doc of documents$ | async">
+        <td>
+          <span [ngClass]="doc.id_tipo_documento_estado|ColorStatusDocument">
+            <ngb-highlight [result]="doc.id_tipo_documento_estado|NameStatusDocument" [term]="service.searchTerm">
+            </ngb-highlight>
+          </span>
+        </td> 
+        <td>
+          <ngb-highlight [result]="doc.usuario_verificacion" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>
+        <td>
+          <a (click)="passDocument(doc)" href="javascript:void(0);">
+            <ngb-highlight [result]="doc.id_interno" [term]="service.searchTerm">
+            </ngb-highlight>
+          </a>
+        </td>
+        <td [hidden]="ivm_flag">
+          <ngb-highlight [result]="doc.fis_elec|EmitTypeDocuments" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>
+        <td>
+          <ngb-highlight [result]="doc.id_tipo_documento" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td><!--  ]{{doc.id_tipo_documento | ShortNameTypeDocuments}}  -->
+        <td>
+          <ngb-highlight [result]="doc.num_serie" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>
+        <td>
+          <ngb-highlight [result]="doc.num_correlativo" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>
+        <!-- <td>
+          <ngb-highlight [result]="doc.fis_elec|EmitTypeDocuments" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>         -->
+        <td [hidden]="ivm_flag">
+          <ngb-highlight [result]="doc.fecha_emision | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>
+        <td [hidden]="ivm_flag">
+            <ngb-highlight [result]="doc.ruc_empresa_proveedor" [term]="service.searchTerm">
+            </ngb-highlight>
+          </td> 
+        <td  [hidden]="ivm_flag">
+            <ngb-highlight [result]="doc.razon_social_proveedor" [term]="service.searchTerm">
+            </ngb-highlight>
+          </td> 
+        <td  [hidden]="!ivm_flag">
+          <ngb-highlight [result]="doc.ruc_empresa_cliente" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td> 
+        <td  [hidden]="!ivm_flag">
+          <ngb-highlight [result]="doc.razon_social_cliente" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>  
+        <td>
+          <ngb-highlight [result]="doc.id_tipo_moneda" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td>    
+        <td style="text-align: right">
+          <ngb-highlight [result]="doc.monto_total | number:'1.2-2'" [term]="service.searchTerm">
+          </ngb-highlight>
+        </td> 
+        
+        <!-- <th scope="row">{{ doc.id_interno }}</th>
+        <td>
+          
+          <!-- <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+          <ngb-highlight [result]="country.name" [term]="service.searchTerm"></ngb-highlight> 
+          
+        </td>
+        <td><ngb-highlight [result]="doc.fecha_emision | date: 'dd/MM/yyyy'" [term]="service.searchTerm"></ngb-highlight></td>
+        <td><ngb-highlight [result]="doc.ruc_empresa_cliente" [term]="service.searchTerm"></ngb-highlight></td> -->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <ngb-pagination
+            [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
+          </ngb-pagination>
+        </div>
+  </div>
+  <div class="row">
+      <!-- <div class="d-flex justify-content-between p-2"> -->
+      
+      <!-- <div  class="col-md-4">
+        <div class="form-group form-inline">
+            Criterio de busqueda local: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+            <span class="ml-3" *ngIf="service.loading$ | async">Espere...</span>
+        </div>
+      </div> -->
+        
+      <div class="col-md-12">
+        <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+          <option [ngValue]="10">10 Items</option>
+          <option [ngValue]="20">20 items</option>
+          <option [ngValue]="50">50 items</option>
+        </select>
+      </div>
+          
+        
+  </div>
+ 
+
+</form>
+
+
+
+
+
+
+
+
+
+<!-- <document-card #UploadImage></document-card>
+<h1>tabla</h1>
+<div  class="table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+          <td>Estado</td>
+          <td>ID</td>
+          <td>Tdoc</td>
+          <td>N° Serie</td>
+          <td>N° Comprobante Pago</td>
+          
+          <td>Tipo Emis.</td>
+          <td>Fecha Emisión</td>
+          <td>RUC Cliente</td>
+          <td>Razon Social Cliente</td>
+          <td>Mon</td>
+          <td>Monto Total</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let doc of _documentsToApprove">
+          <td><span [ngClass]="doc.id_tipo_documento_estado|ColorStatusDocument">
+              {{doc.id_tipo_documento_estado|NameStatusDocument}}
+            </span>
+          </td>
+          <td><a (click)="passDocument(doc)" href="javascript:void(0);">{{doc.id_interno}}</a></td>
+          <td>{{doc.id_tipo_documento}}</td> ]{{doc.id_tipo_documento | ShortNameTypeDocuments}} 
+          <td>{{doc.num_serie}}</td>
+          <td>{{doc.num_correlativo}}</td>
+          
+          <td>{{doc.fis_elec|EmitTypeDocuments}}</td>    
+          <td>{{doc.fecha_emision | date: 'dd/MM/yyyy'}}</td>
+          <td>{{doc.ruc_empresa_proveedor}}</td>
+          <td>{{doc.razon_social_proveedor}}</td>
+          <td>{{doc.id_tipo_moneda}}</td>
+          <td style="text-align: right;">{{doc.monto_total | number:'1.2-2' }}</td>
+      
+        </tr>
+        </tbody>
+      
+      </table>
+</div> -->
+
+
+
+
+<!-- <span *ngIf="doc.id_tipo_documento_estado==1" class="badge badge-warning">
+              Pendiente
+          </span>
+      <span *ngIf="doc.id_tipo_documento_estado==2" class="badge badge-success">
+              Aprovado
+          </span>
+      <span *ngIf="doc.id_tipo_documento_estado==3" class="badge badge-danger">
+              En Coordinación
+          </span>
+      <span *ngIf="doc.id_tipo_documento_estado==4" class="badge badge-secondary">
+              Anulado
+          </span> -->

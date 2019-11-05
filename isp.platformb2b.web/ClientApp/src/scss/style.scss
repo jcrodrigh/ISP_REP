@@ -1,0 +1,21 @@
+// If you want to override variables do it here
+
+:root {
+    --color-primary: #ffad25;
+    --color-secondary: #F58702;
+    --gray-5porciento: #F4F4F5;
+}
+
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+@import "../app/_styles/table.css";
+@import "../app/_styles/panel.css";
+@import "../app/_styles/sidebar.css";
+
+@import "../app/_styles/component.css";

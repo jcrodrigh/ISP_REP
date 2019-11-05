@@ -1,0 +1,516 @@
+<div class="form-group row">
+  <label class="col-form-label col-form-label-sm" for="mecmecy"><h6>Seleccione el tipo de documento</h6></label>
+  <select [formControl]="select" class=" form-control  form-control-sm"
+          name="mecmecy"         
+          id="mecmecy"
+          (change)="SelectTypeDocument($event.target.value)">
+
+    <option value="null">--Seleccione el tipo de documento</option>
+    <option *ngFor="let doc of TypeDocumentsComplete()" [value]="doc.id_tipo_documento">
+      [{{doc.id_tipo_documento}}]&nbsp;{{doc.nombre_documento}}
+    </option>
+  </select>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6">
+
+    <document-display (emmiter)="getLoadedImages($event)" [url_imagen]="loadedImages"></document-display>     
+    <!-- <document-display #displayImage (emmiter)="getLoadedImages($event)" [url_imagen]="loadedImages"></document-display> -->
+
+  </div>
+
+
+  <div class="col-sm-6">
+    <div class="alert alert-danger" *ngIf="tolerancia()">
+      <strong  class="alert">Cuidado</strong>
+      <span class="alert">
+          El monto supera a la tolerancia de la orden de compra
+      </span>
+       
+    </div>
+    
+    <div *ngIf="enableForm">
+      <form [formGroup]="InvoiceFormx()">
+        <div  *ngIf="masktemp().num_serie">
+          <div class="form-group row" *ngIf="!TypeOfDocument().lista_serie">
+            <label class="col-sm-3 col-form-label col-form-label-sm" for="num_serie">Número Serie</label>
+            <input class="form-control form-control-sm col-sm-9"
+                    id="num_serie"
+                    type="text"
+                    name="num_serie"
+                    formControlName="num_serie"
+                    (input) = "applySerialMask()">
+            <span class=alert *ngIf="!InvoiceFormx().get('num_serie').valid && InvoiceFormx().get('num_serie').touched">
+              <span *ngIf="InvoiceFormx().num_serie?.errors?.required">Número de Serie Requerido</span>
+              <span *ngIf="InvoiceFormx().get('num_serie').errors['pattern']">No es un formato adecuado</span>
+            </span>
+          </div>
+          <div class="form-group row" *ngIf="TypeOfDocument().lista_serie">
+            
+            <label class="col-sm-3 col-form-label col-form-label-sm" for="num_serie">Número Serie</label>
+            <select id="num_serie" name="num_serie" 
+                  formControlName="num_serie" 
+                  class="form-control form-control-sm col-sm-9">
+              <option value="">--Seleccione la Serie</option>
+              <option *ngFor="let ser of SerialByTypeOfDoc(TypeOfDocument().id_tipo_documento)" 
+                    [value]="ser.id_tipo_documento_serie"> {{ser.id_tipo_documento_serie}} &nbsp; 
+                    <span *ngIf="ser.descripcion">
+                        - {{ser.descripcion}}
+                    </span>
+                    
+              </option>
+            </select>
+            <span class=alert
+                  *ngIf="!InvoiceFormx().get('num_serie').valid && InvoiceFormx().get('num_serie').touched">
+              <span *ngIf="InvoiceFormx().get('num_serie').errors['required']">El número de serie es requerido</span>
+              
+            </span> 
+          </div>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().num_correlativo">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="num_correlativo">N° Comprobante Pago</label>
+          <input class="form-control form-control-sm col-sm-9"
+                 id="num_correlativo"
+                 type="text"
+                 name="num_correlativo"
+                 formControlName="num_correlativo"
+                 (input) = "applyCorrelativeMask()">
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('num_correlativo').valid && InvoiceFormx().get('num_correlativo').touched">
+										<span *ngIf="InvoiceFormx().get('num_correlativo').errors['required']">Número de Comprobante Pago Requerido</span>
+										<span
+                      *ngIf="InvoiceFormx().get('num_correlativo').errors['pattern']">No es un formato adecuado</span>
+						</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().fecha_emision">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="fecha_emision">Fecha Emision</label>
+          <input class="form-control form-control-sm col-sm-9"
+                 id="fecha_emision"
+                 name="fecha_emision"
+                 formControlName="fecha_emision"
+                 type="date" min="10/07/2019">
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('fecha_emision').valid && InvoiceFormx().get('fecha_emision').touched">
+						<span *ngIf="InvoiceFormx().get('fecha_emision').errors['required']">
+              Fecha de Emisión Requerida
+            </span>
+						<span *ngIf="InvoiceFormx().get('fecha_emision').errors['AfterToday']">
+              Debe ser menor o igual al día de hoy
+            </span>            
+            <span *ngIf="InvoiceFormx().get('fecha_emision').errors['before2000']">
+              Debe colocar fechas posteriores al año 2000
+            </span>
+          </span>           
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().id_tipo_moneda">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="id_tipo_moneda">Moneda</label>
+          <select id="id_tipo_moneda" name="id_tipo_moneda" 
+                formControlName="id_tipo_moneda" 
+                class="form-control form-control-sm col-sm-9">
+            <option [ngValue]="null">--Seleccione Moneda</option>
+            <option *ngFor="let curr of TypeCurrency()" [value]="curr.key">{{curr.value}}</option>
+          </select>
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('id_tipo_moneda').valid && InvoiceFormx().get('id_tipo_moneda').touched">
+            <span *ngIf="InvoiceFormx().get('id_tipo_moneda').errors['required']">Tipo Moneda Requerido</span>
+            <span *ngIf="InvoiceFormx().get('id_tipo_moneda').errors['coinPurcharseOrder']">La moneda debe ser la misma que la orden de compra</span>
+						</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().factura_origen_serie">
+          <label class="col-sm-4 col-form-label col-form-label-sm" for="factura_origen_serie">Factura Origen Serie</label>
+          <input class="form-control form-control-sm col-sm-8"
+                 id="factura_origen_serie"
+                 type="text"
+                 name="factura_origen_serie"
+                 formControlName="factura_origen_serie">
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('factura_origen_serie').valid && InvoiceFormx().get('factura_origen_serie').touched">
+							<span
+                *ngIf="InvoiceFormx().get('factura_origen_serie').errors['required']">La Factura de Origen es Requerida</span>
+              <span *ngIf="InvoiceFormx().get('factura_origen_serie').errors['pattern']">No es un formato adecuado</span>
+              <span *ngIf="InvoiceFormx().get('factura_origen_serie').errors['originInvoiceSerial']">Debe incluir el correlativo si incluye la serie</span>
+      
+              
+			</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().factura_origen_correlativo">
+          <label class="col-sm-4 col-form-label col-form-label-sm" for="factura_origen_correlativo">Factura Origen Correlativo</label>
+          <input class="form-control form-control-sm col-sm-8"
+                 id="factura_origen_correlativo"
+                 type="text"
+                 name="factura_origen_correlativo"
+                 formControlName="factura_origen_correlativo">
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('factura_origen_correlativo').valid && InvoiceFormx().get('factura_origen_correlativo').touched">
+							<span
+                *ngIf="InvoiceFormx().get('factura_origen_correlativo').errors['required']">La Factura de Origen es Requerida</span>
+              <span *ngIf="InvoiceFormx().get('factura_origen_correlativo').errors['pattern']">No es un formato adecuado</span>
+              <span *ngIf="InvoiceFormx().get('factura_origen_correlativo').errors['originInvoiceCorrelative']">Si incluye la serie debe incluir el correlativo</span>
+              
+			</span>
+        </div>
+
+
+        <div class="form-group row" *ngIf="masktemp().ruc_empresa_cliente">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="ruc_empresa_cliente">Empresa Cliente</label>
+          <select class="form-control form-control-sm col-sm-9"
+                  id="ruc_empresa_cliente"
+                  name="ruc_empresa_cliente"
+                  formControlName="ruc_empresa_cliente"
+                  (change)="SelectEnterprice($event.target.value)">
+            <option [value]="null">--seleccione una opción</option>
+            <option [value]="enterprice.ruc_empresa" *ngFor="let enterprice of enterprices()" >
+              <strong>{{enterprice.ruc_empresa}}</strong>&nbsp;-&nbsp;
+              <b>{{enterprice.razon_social | uppercase}}</b>
+            </option>
+          </select>
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('ruc_empresa_cliente').valid && InvoiceFormx().get('ruc_empresa_cliente').touched">
+				<span *ngIf="InvoiceFormx().get('ruc_empresa_cliente').errors['required']">Empresa Cliente Requerido</span>
+				</span>
+        </div>
+
+
+        <div *ngIf="masktemp().id_orden_compra &&
+                  ((enterpriceByRUC()!=null)?enterpriceByRUC().con_pedido:false) &&
+                  TypeOfDocument().orden_compra_requerido">
+          <div class="form-group row" *ngIf="((enterpriceByRUC()!=null)?enterpriceByRUC().con_pedido:false)">
+            <label class="col-sm-3 col-form-label col-form-label-sm" for="id_orden_compra">Orden de compra</label>
+            <select class="form-control form-control-sm col-sm-9"
+                    name="id_orden_compra"
+                    id="id_orden_compra"
+                    formControlName="id_orden_compra"
+                    (change)="SelectPurcharseOrder($event.target.value)" >
+              <!-- (change)="SelectPurcharseOrder($event.target.value)" -->
+              <!-- > [attr.disabled]=bloquear_orden -->
+              <!-- &nbsp;&nbsp; - &nbsp;&nbsp;
+                Acumu.:{{po.monto_acumulado}} -->
+              <option [value]="null">--Seleccione una orden de compra</option>
+              <option *ngFor="let po of purchaseOrders()" [hidden]="po.competado"  [value]="po.id_orden_compra">
+                
+                <!-- [disabled] = "po.competado"> -->
+                Código:&nbsp;{{po.id_orden_compra}}
+                &nbsp;&nbsp; - &nbsp;&nbsp;
+                
+                <span *ngIf="!po.competado">
+                  Monto:&nbsp;{{po.id_tipo_moneda|GetSymbolOfCurrency}}
+                  &nbsp;&nbsp;{{po.monto_orden_compra - po.monto_acumulado | number:'1.2-2'}}
+                </span>
+                <span *ngIf="po.competado">
+                  COMPLETADO
+                </span>
+                
+                
+              </option>
+            </select>
+            <span class=alert
+                  *ngIf="!InvoiceFormx().get('id_orden_compra').valid && InvoiceFormx().get('id_orden_compra').touched">
+														<span *ngIf="InvoiceFormx().get('id_orden_compra').errors['required']">Se requiere la orden de compra :V</span>
+										</span>
+          </div>
+
+          <div class=" form-check" *ngIf="((enterpriceByRUC()!=null)?enterpriceByRUC().sin_pedido:false)">
+            <input type="checkbox"
+                   class=" form-check-input"
+                   id="exampleCheck1"
+                   (click)="subir_sin_orden($event.currentTarget.checked)"
+            >
+            <label class="col-sm-3 col-form-label col-form-label-sm" class=" form-check-label" for="exampleCheck1">
+              Sin orden de compra</label>
+          </div>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().ceco">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="ceco">Ceco</label>
+          <input class="form-control form-control-sm col-sm-9"
+                 id="ceco"
+                 type="text"
+                 name="ceco"
+                 formControlName="ceco"
+                 (input) = "lockOrden()"
+                 >
+          <span class=alert *ngIf="!InvoiceFormx().get('ceco').valid && InvoiceFormx().get('ceco').touched">
+										<span *ngIf="(InvoiceFormx().get('ceco')?.errors?.required)?
+                    InvoiceFormx().get('ceco')?.errors['required']:false">Es obligatorio cuando no incluye orden de compra</span>
+										
+						</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().orden">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="orden">Orden</label>
+          <input class="form-control form-control-sm col-sm-9"
+                 id="orden"
+                 type="text"
+                 name="orden"
+                 formControlName="orden"
+                 (input) = "lockCeco ()">
+          <span class=alert *ngIf="!InvoiceFormx().get('orden').valid && InvoiceFormx().get('orden').touched">
+              <!-- {{!InvoiceFormx().get('orden').valid}}
+              {{InvoiceFormx().get('orden').touched}}
+              
+            mecmec -->
+                    <span *ngIf="(InvoiceFormx().get('orden')?.errors?.required)?
+                    InvoiceFormx().get('orden')?.errors['required']:false">Es obligatorio cuando no incluye orden de compra</span>
+										
+						</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().id_tipo_detracciones">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="id_tipo_detracciones">Tipo detracción</label>
+          <select class="form-control form-control-sm col-sm-9"
+                  name="id_tipo_detracciones"
+                  id="id_tipo_detracciones"
+                  formControlName="id_tipo_detracciones"
+          >
+            <!-- > [attr.disabled]=bloquear_orden -->
+            <option [ngValue]="null">--Seleccione la detracción</option>
+            <option *ngFor="let det of getAllDetractions()" [value]="det.id_tipo_detracciones">
+              [{{det.id_tipo_detracciones}}]
+              {{det.descripcion_detracciones}}
+              ({{det.valor_detracciones}}  %)
+            </option>
+          </select>
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('id_tipo_detracciones').valid && InvoiceFormx().get('id_tipo_detracciones').touched">
+								<span
+                  *ngIf="InvoiceFormx().get('id_tipo_detracciones').errors['required']">Se requiere la detracción</span>
+				</span>
+        </div>
+        <!--div class="form-group row" *ngIf="masktemp().factura_negociable" style="padding-left: 10px;">
+            <input type="checkbox"
+                class=" form-check-input"
+                id="factura_negociable"
+                name="factura_negociable"
+                formControlName = "factura_negociable"
+                (click)="cambiar()"
+                value = true
+                >
+            <label  class="col-sm-3 col-form-label col-form-label-sm" class=" form-check-label" for="factura_negociable">Factura Negociable</label>
+        </div-->
+
+
+        <div class="form-group row" *ngIf="masktemp().factura_negociable">
+          <label class="col-sm-3 col-form-label col-form-label-sm" for="factura_negociable">Factura Negociable</label>
+          <select class="form-control form-control-sm col-sm-9"
+                  id="factura_negociable"
+                  name="factura_negociable"
+                  formControlName="factura_negociable">
+            <option [ngValue]="null">--Es negociable?</option>
+            <option [ngValue]="true">Sí</option>
+            <option [ngValue]="false">No</option>
+          </select>
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('factura_negociable').valid && InvoiceFormx().get('factura_negociable').touched">
+				<span *ngIf="InvoiceFormx().get('factura_negociable').errors['required']">Definir si es negociable o no</span>
+
+			</span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().monto_subtotal_afecto">
+          <label class="col-sm-4 col-form-label col-form-label-sm"
+                 for="monto_subtotal_afecto">{{TypeOfDocument().nombre_afecto}}</label>
+          
+          <div class="controls">
+            <div class="input-prepend input-group">
+              <div class="input-group-prepend form-control-sm">
+                <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+              </div>
+              <input class="form-control form-control-sm col-sm-8" (input)="CalculateTotalAmount()"
+                 id="monto_subtotal_afecto"
+                 type="number"
+                 name="monto_subtotal_afecto"
+                 formControlName="monto_subtotal_afecto"
+                 step="0.01">            
+            </div>
+          </div>
+                 
+          <span class=alert
+                 *ngIf="!InvoiceFormx().get('monto_subtotal_afecto').valid && InvoiceFormx().get('monto_subtotal_afecto').touched">
+            <span *ngIf="InvoiceFormx().get('monto_subtotal_afecto').errors['required']">Se requiere {{TypeOfDocument().nombre_afecto}}</span>
+            <span *ngIf="InvoiceFormx().get('monto_subtotal_afecto').errors['pattern']">No es un formato coherente</span>
+          </span>
+
+        </div>
+
+
+        <div class="form-group row" *ngIf="masktemp().monto_subtotal_inafecto">
+          <label class="col-sm-4 col-form-label col-form-label-sm"
+                 for="monto_subtotal_inafecto">Valor Subtotal Inafecto</label>
+          <div class="controls">
+            <div class="input-prepend input-group">
+              <div class="input-group-prepend form-control-sm">
+                <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+              </div>
+              <input class="form-control form-control-sm col-sm-8" (input)="CalculateTotalAmount(true)"
+                 id="monto_subtotal_inafecto"
+                 type="number"
+                 name="monto_subtotal_inafecto"
+                 formControlName="monto_subtotal_inafecto"
+                 step="0.01">             
+            </div>
+          </div>
+          
+          <span class=alert
+                 *ngIf="!InvoiceFormx().get('monto_subtotal_inafecto').valid && InvoiceFormx().get('monto_subtotal_inafecto').touched">
+            <span *ngIf="InvoiceFormx().get('monto_subtotal_inafecto').errors['required']">Se requiere {{TypeOfDocument().nombre_inafecto}} (coloque cero si no va a incluir nada)</span>
+            <span *ngIf="InvoiceFormx().get('monto_subtotal_inafecto').errors['pattern']">No es un formato coherente</span>
+          
+            
+          </span>
+        </div>
+
+
+        <div class="form-group row" *ngIf="masktemp().monto_isc">
+          <label class="col-sm-4 col-form-label col-form-label-sm" for="monto_isc">Monto ISC</label>
+          
+          <div class="controls">
+            <div class="input-prepend input-group">
+              <div class="input-group-prepend form-control-sm">
+                <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+              </div>
+              <input class="form-control form-control-sm col-sm-8" (input)="CalculateTotalAmount()"
+                id="monto_isc"
+                type="number"
+                name="monto_isc"
+                formControlName="monto_isc"
+                step="0.01">              
+            </div>
+          </div>
+          <span class=alert
+                 *ngIf="!InvoiceFormx().get('monto_isc').valid && InvoiceFormx().get('monto_isc').touched">
+            <span *ngIf="InvoiceFormx().get('monto_isc').errors['required']">Se requiere el ISC (coloque cero si no va a incluir nada)</span>
+            <span *ngIf="InvoiceFormx().get('monto_isc').errors['pattern']">No es un formato coherente</span>
+          </span>
+        </div>
+
+        <div class="form-group row" *ngIf="masktemp().monto_igv">
+          <label class="col-sm-4 col-form-label col-form-label-sm"
+                 for="monto_igv">{{TypeOfDocument().nombre_iva}}({{TypeOfDocument().iva*100}}%)</label>
+          
+            <div class="controls">
+              <div class="input-prepend input-group">
+                <div class="input-group-prepend form-control-sm">
+                  <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+                </div>
+                <input class="form-control form-control-sm col-sm-8" (input)="CalculateTotalAmount(true)"
+                  id="monto_igv"
+                  type="number"
+                  name="monto_igv"
+                  formControlName="monto_igv"
+                  step="0.01"
+                 >              
+              </div>
+            </div>
+            <span class=alert
+          *ngIf="!InvoiceFormx().get('monto_igv').valid && InvoiceFormx().get('monto_igv').touched">
+            <span *ngIf="InvoiceFormx().get('monto_igv').errors['required']">El IGV es requerido Es requerido</span>
+            <span *ngIf="InvoiceFormx().get('monto_igv').errors['pattern']">No es un formato coherente</span>
+            <span *ngIf="InvoiceFormx().get('monto_igv').errors['CheckCorrectIGV']">El IGV no coincide con su porcentaje final</span>
+          </span>
+        </div>
+
+       
+        <!-- <div class="form-group row" *ngIf="masktemp().anticipo">
+            <label class="col-sm-4 col-form-label col-form-label-sm" for="anticipo">Anticipo</label>
+            
+            <div class="controls">
+              <div class="input-prepend input-group">
+                <div class="input-group-prepend form-control-sm">
+                  <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+                </div>
+                <input class="form-control form-control-sm col-sm-8"
+                  id="anticipo"
+                  type="number"
+                  name="anticipo"
+                  formControlName="anticipo"
+                  step="0.01">               
+              </div>
+            </div>
+            <span class=alert *ngIf="!InvoiceFormx().get('anticipo').valid && InvoiceFormx().get('anticipo').touched">
+              <span *ngIf="InvoiceFormx().get('anticipo').errors['required']">El anticipo es requerido</span>
+              <span *ngIf="InvoiceFormx().get('anticipo').errors['pattern']">No es un formato adecuado</span>
+           </span>
+        </div> -->
+
+        <div class="form-group row" *ngIf="masktemp().monto_total">
+          <label class="col-sm-4 col-form-label col-form-label-sm" for="monto_total">Monto Total</label>
+          <div class="controls">
+              <div class="input-prepend input-group">
+                <div class="input-group-prepend form-control-sm">
+                  <span class="input-group-text">{{ActualCurrency()|GetSymbolOfCurrency}}</span>
+                </div>
+                <input class="form-control form-control-sm col-sm-8"
+                 id="monto_total"
+                 type="number"
+                 name="monto_total"
+                 formControlName="monto_total"
+                 step="0.01"
+                 disabled>                
+              </div>
+          </div>
+          <span class=alert
+                *ngIf="!InvoiceFormx().get('monto_total').valid && InvoiceFormx().get('monto_total').touched">
+				    <span *ngIf="InvoiceFormx().get('monto_total').errors['required']">El Monto Total Es requerido</span>
+			    </span>
+        </div>
+
+
+
+
+        <!-- && showImagen [disabled]="!(InvoiceFormx().valid  && !toleranciaOK)" -->
+        <button class="btn btn-ghost-success active"
+                (click)="onSubmit3()"
+                [disabled]="!(InvoiceFormx().valid  && !toleranciaOK && loadedImages.length>0)"
+        >
+          <i class="fa fa-dot-circle-o"></i>
+          Finalizar
+        </button>
+      </form>
+
+
+    </div>
+  </div>
+</div>
+
+<swal
+    #SuccessSwal
+    
+    text="Se subió con exito"
+    type="success"
+    [showCancelButton]="false"
+    [focusCancel]="true"
+    html=""
+    (confirm)="LimpiarControles()"
+    >
+</swal>
+
+<swal
+    #deleteSwal
+    title="Está seguro?"
+    text="Por favor, tómese unos minutos y revise"
+    type="question"
+    [showCancelButton]="true"
+    [focusCancel]="true"
+    (confirm)="ConfirmSubmit()">
+</swal>
+
+<swal
+    #ErrorSwal
+    title="Ups!"
+    [html]="mensajeError" 
+    type="error"
+    [showCancelButton]="true"
+    [focusCancel]="true">
+</swal>
+
+
+
+
+

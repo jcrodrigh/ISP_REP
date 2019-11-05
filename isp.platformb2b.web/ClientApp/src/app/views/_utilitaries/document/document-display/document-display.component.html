@@ -1,0 +1,106 @@
+
+ 
+ <div *ngIf="url_imagen" style="justify-content: center;"> 
+  <carousel *ngIf="url_imagen.length ==0">
+      <slide >
+          <label for="fileInput{{index == null ? 0 : index}}">
+            <img id=nube src="assets/img/logox/subir_imagen.png" alt="Subir imagen" srcset=""  >
+            <br>
+            <span>Click para subir el documento</span>
+          </label>
+        <!-- <img src="https://www.belightsoft.com/products/imagetricks/img/intro-video-poster@2x.jpg" alt="First slide" style="display: block; width: 100%;"> -->
+        
+      </slide>
+    </carousel>
+
+  <carousel [interval]="3000"  *ngIf="url_imagen.length >0" style="height:198px;width:395px;position: relative;" >
+          
+          <slide *ngFor="let url of url_imagen">
+
+            <div *ngIf="url.substr(url.lastIndexOf('.')).toLowerCase()==='.jpg' || url.substr(url.lastIndexOf('.')).toLowerCase()==='.png'">
+              <!-- <p>El documento es una imagen </p> -->
+              <img class="doc" src="document/imagen/{{url}}">
+            </div>
+
+            <div *ngIf="url.substr(url.lastIndexOf('.')).toLowerCase()==='.pdf'">
+                <!-- <p>El documento es un documento pdf</p> -->
+                
+                <div class="doc">
+                    <img id=documento src="assets/img/logox/icon_pdf.png" style="align-content: center;width: 35vh;height:35vh;" alt="Documento Cargado" srcset=""><br/>
+                    <a style="text-align: center;" (click)="descargarPDF(url)" >Descargar Documento</a>
+                </div>
+            </div>
+
+            <div class="carousel-caption d-none d-md-block">
+                                    
+              <button aria-pressed="true" class="btn btn-pill btn-danger" type="button" (click)="delete(url)">
+                      <i class="fa fa-times"></i>
+              </button>
+              <button aria-pressed="true" 
+                      class="btn btn-pill btn-primary" 
+                      [ngClass]="(url_imagen.length>=5)?'disabled':''"
+                      type="button" [disabled] = "url_imagen.length>=5">
+                  <label for="fileInput{{index == null ? 0 : index}}" *ngIf="url_imagen.length<5">
+                    <i class="fa fa-plus"></i>
+                  </label>
+                  <i class="fa fa-plus" 
+                        *ngIf="url_imagen.length>=5"
+                        tooltip="Supero los 5 archivos."
+                        placement="top"></i>
+              </button>
+                
+            </div>
+            
+          </slide>
+          <!-- <slide>
+            <img src="https://www.belightsoft.com/products/imagetricks/img/intro-video-poster@2x.jpg" alt="Third slide" style="display: block; width: 100%;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </slide> -->
+  </carousel>
+</div>
+
+<input #imageInput
+              id="fileInput{{index == null ? 0 : index}}"
+              type="file"
+              accept="image/*"
+              multiple (change)="getFileDetails($event)"
+              style="display: none;">
+
+<swal
+  #SuccessSwal
+  title="Se subió con exito!"
+  text="Se subió con exito"
+  type="success"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+ 
+  
+  >
+</swal>
+
+<!-- 
+html =  "<div class=row>
+    <div cass=col-md-3>olenka</div>
+    <div class=col-md-9>kocchiu</div>
+  </div>" -->
+
+<swal
+  #deleteSwal
+  title="Está seguro?"
+  text="Por favor, tómese unos minutos y revise"
+  type="question"
+  [showCancelButton]="true"
+  [focusCancel]="true"
+ >
+</swal>
+
+<swal
+  #ErrorSwal
+  title="ups!"
+  [text]="messageError"
+  type="error"
+  [focusCancel]="true">
+</swal>

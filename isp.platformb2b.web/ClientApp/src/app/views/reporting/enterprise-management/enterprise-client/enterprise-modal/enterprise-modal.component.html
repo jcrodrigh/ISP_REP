@@ -1,0 +1,164 @@
+
+<div bsModal #EnterpriseForm="bs-modal"
+    class="modal fade"
+    tabindex="-1" role="dialog"
+    aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+            
+            </div>
+        <div class="modal-body fondo">
+            <div class="row">
+                <div class="modal_contenido col-md-6 offset-md-3 px-3 py-3">
+                    <div class="modal_tittle">
+                        <span *ngIf="upd_cre_flag">
+                                Creación de Empresa Cliente
+                        </span>
+                        <span *ngIf="!upd_cre_flag">
+                            Actualización - {{enterprice.ruc_empresa}}
+                        </span>
+                    </div>
+                    <form [formGroup]="enterpriseForm" >
+                        <div class="form-group row" *ngIf="upd_cre_flag">
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="ruc_empresa">RUC Empresa</label>
+                            <input class="form-control form-control-sm col-sm-8"
+                                formControlName="ruc_empresa"
+                                id="ruc_empresa"
+                                name="ruc_empresa"
+                                type="text"
+                                (input)="existencia_empresa()"
+                                >
+                            <button  class=" col-md-1 form-control btn btn-primary-ivm" 
+                            (click)="buscar_empresa ()" 
+                            [disabled]="inactive_form">
+                                    <i class="fa fa-search"></i>
+                            </button>
+                            <span class=alert
+                                *ngIf="!enterpriseForm.get('ruc_empresa').valid && enterpriseForm.get('ruc_empresa').touched">
+                                <span *ngIf="enterpriseForm.get('ruc_empresa').errors['required']">
+                                    El RUC de La empresa es requerido
+                                </span>
+                                <span *ngIf="enterpriseForm.get('ruc_empresa').errors['pattern']">
+                                    No es un formato adecuado
+                                </span>
+                            </span>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="razon_social">Razón Social</label>
+                            <input class="form-control form-control-sm col-sm-9"
+                                formControlName="razon_social"
+                                id="razon_social"
+                                name="razon_social"
+                                type="text"
+                               >
+                            <span class=alert
+                                *ngIf="!enterpriseForm.get('razon_social').valid && enterpriseForm.get('razon_social').touched">
+                                <span *ngIf="enterpriseForm.get('razon_social').errors['required']">
+                                    La Razón Social es requerida
+                                </span>
+                            </span>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="domicilio_fiscal">Domicilio Fiscal</label>
+                            <input class="form-control form-control-sm col-sm-9"
+                                formControlName="domicilio_fiscal"
+                                id="domicilio_fiscal"
+                                name="domicilio_fiscal"
+                                type="text"
+                               >
+                            <span class=alert
+                                *ngIf="!enterpriseForm.get('domicilio_fiscal').valid && enterpriseForm.get('domicilio_fiscal').touched">
+                                <span *ngIf="enterpriseForm.get('domicilio_fiscal').errors['required']">
+                                    El Domicilio Fiscal es requerido
+                                </span>
+                            </span>
+                        </div>
+                        <!-- <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="id_tipo_empresa_erp">Fecha Emision</label>
+                            <input class="form-control form-control-sm col-sm-9"
+                                formControlName="id_tipo_empresa_erp"
+                                id="id_tipo_empresa_erp"
+                                name="id_tipo_empresa_erp"
+                                type="text">
+                    
+                        </div> -->
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="id_tipo_empresa_erp">Tipo ERP</label>
+                            <select class="form-control form-control-sm col-sm-9"
+                                    formControlName="id_tipo_empresa_erp" 
+                                    name="id_tipo_empresa_erp"         
+                                    id="id_tipo_empresa_erp"
+                                   >
+                            
+                                <option value="">--Seleccione el tipo de ERP</option>
+                                <option *ngFor="let erp of lista_erps" [value]="erp.Key">
+                                    {{erp.Key}} {{erp.Value}}
+                                </option> 
+                            </select>
+                            <span class=alert
+                                *ngIf="!enterpriseForm.get('id_tipo_empresa_erp').valid && enterpriseForm.get('id_tipo_empresa_erp').touched">
+                                <span *ngIf="enterpriseForm.get('id_tipo_empresa_erp').errors['required']">
+                                    El tipo de ERP es requerido
+                                </span>
+                            </span>
+                        </div>
+                        <div>
+                            <button (click)="crear()" class="form-control btn btn-primary-ivm"
+                                [disabled] = "enterpriseForm.invalid &&  nueva_empresa"
+                                *ngIf="upd_cre_flag"
+    
+
+                            >
+                                    <!-- <i class="fa fa-search"></i>Buscar -->
+                                    Crear
+                                    </button>
+                            <button (click)="actualizar()" class="form-control btn btn-primary-ivm"
+                            [disabled] = "enterpriseForm.invalid "
+                            *ngIf="!upd_cre_flag">
+                                <!-- <i class="fa fa-search"></i>Buscar -->
+                                Actualizar
+                                </button>
+                        </div>
+                        
+                    </form>
+            
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="modal-footer">
+            <div class="pull-right">
+                <button type="button" class="btn btn-primary" (click)="close()" >Cancelar</button>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+</div>
+
+<swal
+    #SuccessSwal
+   
+    text="Se subió con exito"
+    type="success"
+    [showCancelButton]="false"
+    [focusCancel]="true"
+    html=""
+    
+    >
+</swal>
+
+<swal
+    #ActivateSwal
+    title="Desactivar Empresa"
+    text="Desea eliminar la Empresa Cliente?"
+    type="question"
+    [showCancelButton]="true"
+    [focusCancel]="true"
+    html=""
+    (confirm)="activar_empresa()"
+    
+    >
+</swal>

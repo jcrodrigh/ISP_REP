@@ -1,0 +1,19 @@
+.btn-primary-ivm 
+{
+    background-color: var(--color-primary) !important;
+    color:white !important;
+}
+
+.btn-primary-ivm:hover
+{
+    background-color: var(--color-secondary) !important;
+    color:white !important;
+}
+
+
+.swall-overlay {
+    z-index: 100005;
+}
+.swal-modal {
+    z-index: 99999;
+}

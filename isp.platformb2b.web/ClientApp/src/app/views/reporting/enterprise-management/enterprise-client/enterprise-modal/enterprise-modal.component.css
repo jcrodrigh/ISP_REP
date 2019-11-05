@@ -1,0 +1,28 @@
+.fondo
+{
+    background: radial-gradient(#FFF176, #F57F17);
+    /* background-image: radial-gradient(ellipse farthest-corner at 45px 45px ,
+     #FFF176 0%, rgba(0, 0, 255, 0) 50%, #F57F17 95%); */
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal_contenido
+{
+    
+  transition: transform 300ms ease-in-out;
+  box-shadow: 0px 50px 30px -30px rgba(0,0,0,0.3);
+  background: white;
+}
+
+.modal_tittle
+{
+    
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #FF8F00;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+}

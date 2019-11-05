@@ -1,0 +1,451 @@
+<!--
+   <div class="btn-group" dropdown [autoClose]="false">
+    <button dropdownToggle type="button" class="btn btn-success  dropdown-toggle"
+    data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-database"></i><span class="caret"></span>
+    </button>
+    <div *dropdownMenu class="dropdown-menu dropdown-menu-lg-right">
+
+      <form class="px-4 py-3">
+        <label>Seleccione la empresa cliente</label>
+        <ng-select 
+        style="width: auto !important" 
+                    [items]="_ActiveClients"
+                   bindLabel="razon_social"
+                   bindValue="ruc_empresa"
+                   [multiple]="true"
+                   placeholder="Seleccione cliente"
+                   [(ngModel)]="ruc_empresa_cliente"
+                   [ngModelOptions]="{standalone: true}"
+                   >
+        </ng-select >
+
+        <label>Seleccione el estado</label>
+        <ng-select 
+        style="width: auto !important" 
+                    [items]="estatusDocument"
+                   bindLabel="nombre"
+                   bindValue="id"
+                   [multiple]="true"
+                   placeholder="Seleccione estado"
+                   [(ngModel)]="id_documento_estado"
+                   [ngModelOptions]="{standalone: true}"
+                   >
+        </ng-select >
+        <hr />
+        <button (click)="buscar()" class="btn btn-primary"><i class="fa fa-search"></i>Buscar</button>
+      </form>
+      
+    </div>
+  </div> 
+-->
+<document-card #UploadImage></document-card>
+<div class="row">
+  <div class="col-md-10">
+
+  </div>
+  <div class="col-md-1">
+      <img 
+      id=nube 
+      src="assets/img/logox/excel-icon.png" 
+      style=" width: 100%;
+      margin-left: 30%;
+      margin-top: 10%;"
+      alt="Exportar Documentos de Gestion"
+      (click)="exportar()" 
+      srcset="" >
+  </div>
+</div>
+<!-- <div class="row d-flex justify-content-end">
+      <img 
+        id=nube
+        src="assets/img/logox/excel-icon.png" 
+        style=" width: 3%; height: 3%;"
+        alt="Exportar Documentos de Gestion"
+        (click)="exportar()" 
+        srcset="" >
+</div> -->
+<br>
+<div class="row">
+        <div class="col-md-3">
+                <label>Seleccione la empresa cliente</label>
+                <ng-select
+                    [disabled]="disabledSelectCliente"
+                    style="width: auto !important" 
+                    [items]="_ActiveClients"
+                    (change)="onSelectClienteChange($event)"
+                    bindLabel="razon_social"
+                    bindValue="ruc_empresa"
+                    [multiple]="true"
+                    placeholder="Seleccione cliente"
+                    [(ngModel)]="ruc_empresa_cliente"
+                    [ngModelOptions]="{standalone: true}">
+                </ng-select >
+    
+                <label>Ruc cliente</label>
+                <input 
+                [disabled] = "disabledTextCliente"
+                type="text"
+                class="form-control textbox-disabled"
+                [(ngModel)]="txtruc_empresa_cliente"
+                (keyup)="onKeyupCliente($event.target.value)"
+                placeholder=""/>
+    
+                <label>Seleccione ruc proveedor</label>
+                <ng-select
+                    [disabled]="disabledSelectProveedor" 
+                    style="width: auto !important" 
+                    [items]="_ActiveProviders"
+                    (change)="onSelectProveedorChange($event)"
+                    bindLabel="razon_social"
+                    bindValue="ruc_empresa"
+                    [multiple]="true"
+                    placeholder="Seleccione proveedor"
+                    [(ngModel)]="ruc_empresa_proveedor"
+                    [ngModelOptions]="{standalone: true}">
+                </ng-select >
+    
+                <label>Ruc proveedor</label>
+                <input
+                [disabled] ="disabledTextProveedor"
+                type="text"
+                class="form-control textbox-disabled"
+                [(ngModel)]="txtruc_empresa_proveedor"
+                (keyup)="onKeyupProveedor($event.target.value)"
+                placeholder=""/>
+                
+                <label>Fecha Registro</label>
+
+                    
+                    <div class="form-inline">
+                        <label class="col-sm-4">De : </label>
+                        <input class="form-control col-sm-8"
+                               id="fecha_emision"
+                               name="fecha_emision"
+                               [(ngModel)]="fecha_emision_inferior"
+                               type="date" min="10/07/2019">        
+                    </div>
+
+                    <div class="form-inline">
+                    <label class="col-sm-4">Hasta : </label>
+                      <input class="form-control col-sm-8"
+                             id="fecha_emision"
+                             name="fecha_emision"
+                             [(ngModel)]="fecha_emision_superior"
+                             type="date" min="10/07/2019">  
+                    </div>
+                <label>Seleccione el estado</label>
+                <ng-select 
+                  style="width: auto !important" 
+                  [items]="estatusDocument"
+                  bindLabel="nombre"
+                  bindValue="id"
+                  [multiple]="true"
+                  placeholder="Seleccione estado"
+                  [(ngModel)]="id_documento_estado"
+                  [ngModelOptions]="{standalone: true}">
+                </ng-select>
+    
+                <label>Tipo emision</label>
+                <ng-select 
+                  style="width: auto !important" 
+                  [items]="tipoEmision"
+                  bindLabel="nombre"
+                  bindValue="id"
+                  [multiple]="true"
+                  placeholder="Seleccione emision"
+                  [(ngModel)]="fis_elec"
+                  [ngModelOptions]="{standalone: true}">
+                </ng-select>
+                  <HR>
+                  <button (click)="buscar()" class="form-control btn btn-primary-ivm">
+                    <!-- <i class="fa fa-search"></i>Buscar -->
+                    Ejecutar
+                  </button>
+    
+                
+        </div>
+      <div class="col-md-9">
+          <!--
+            <documents-table #DocumentTable></documents-table>
+          -->
+    
+          <form>
+            <div  class="table-responsive">
+              <table class="table table-striped header-color">
+                <thead>
+                <tr>
+                  <th scope="col" sortable="id_tipo_documento_estado" (sort)="onSort($event)">Estado</th>
+                  <th scope="col" sortable="id_interno" (sort)="onSort($event)">ID</th>
+                  <th scope="col" sortable="id_tipo_documento" (sort)="onSort($event)">Tipo Doc.</th>
+                  <th scope="col" sortable="num_serie" (sort)="onSort($event)">N° Serie</th>
+                  <th scope="col" sortable="num_correlativo" (sort)="onSort($event)" style="min-width: 130px;">N° Comprob. Pago</th>        
+                  <th scope="col" sortable="fecha_emision" (sort)="onSort($event)">Fecha Emisión</th>
+    
+                  <th scope="col" sortable="factura_origen_serie" (sort)="onSort($event)" style="min-width: 130px;">Ref. Serie Fact. Origen</th>  
+                  <th scope="col" sortable="factura_origen_correlativo" (sort)="onSort($event)" style="min-width: 130px;">Ref. N° Fact. Origen</th>
+    
+                  <th scope="col" sortable="id_tipo_moneda" (sort)="onSort($event)">Mon.</th>
+                  <th scope="col" sortable="monto_subtotal_afecto" (sort)="onSort($event)">Valor Venta</th>
+    
+                  <th scope="col" sortable="monto_subtotal_inafecto" (sort)="onSort($event)">Valor Inafecto</th>
+                  <th scope="col" sortable="monto_isc" (sort)="onSort($event)">ISC</th>
+                  <th scope="col" sortable="iva" (sort)="onSort($event)">% IGV</th>
+                  <th scope="col" sortable="monto_igv" (sort)="onSort($event)">Cuota Impuesto</th>
+                  <th scope="col" sortable="monto_total" (sort)="onSort($event)">Monto Total</th>
+    
+                  <th scope="col" sortable="ruc_empresa_proveedor" (sort)="onSort($event)">RUC Proveedor</th>
+                  <th scope="col" sortable="razon_social_proveedor" (sort)="onSort($event)" style="min-width: 150px;">Nombre Proveedor</th>
+    
+                  <th scope="col" sortable="id_orden_compra" (sort)="onSort($event)">N° PO/OC</th>
+                  <th scope="col" sortable="num_correlativo" (sort)="onSort($event)">N° Conformidad</th>
+                  <th scope="col" sortable="ruc_empresa_cliente" (sort)="onSort($event)">RUC Sociedad</th>
+                  <th scope="col" sortable="razon_social_cliente" (sort)="onSort($event)" style="min-width: 150px;">Nombre Cliente</th>
+    
+                  <th scope="col" sortable="ceco" (sort)="onSort($event)">CECO</th>
+                  <th scope="col" sortable="orden" (sort)="onSort($event)">ORDEN</th>
+    
+                  <th scope="col" sortable="id_tipo_detracciones" (sort)="onSort($event)">Detraccion</th>
+                  <th scope="col" sortable="factura_negociable" (sort)="onSort($event)">FA Negociable</th>
+                  <th scope="col" sortable="fis_elec" (sort)="onSort($event)">Tipo Emision</th>
+    
+                  <th scope="col" sortable="" (sort)="onSort($event)">Usuario Escaneo</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Fecha Escaneo</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Hora Escaneo</th>
+    
+                  <th scope="col" sortable="" (sort)="onSort($event)">Fecha Recepcion</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Usuario Verificador</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Fecha Verificador</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Hora Verificador</th>
+                  <th scope="col" sortable="fecha_transferencia" (sort)="onSort($event)">Fecha Transferencia</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Cod. CIIU</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Nombre CIIU</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Acreedor</th>
+    
+                  <th scope="col" sortable="fecha_contabilizacion" (sort)="onSort($event)">Fecha contabilización</th>
+                  <th scope="col" sortable="nro_registro_contable" (sort)="onSort($event)" style="min-width: 130px;">N° Asiento Contable</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Periodo</th>
+                  <th scope="col" sortable="" (sort)="onSort($event)">Mes</th>
+                </tr>
+                </thead>
+                <tbody>
+    
+                <tr *ngFor="let doc of documents$ | async">
+                  <td>
+                    <span [ngClass]="doc.id_tipo_documento_estado|ColorStatusDocument">
+                      <ngb-highlight [result]="doc.id_tipo_documento_estado|NameStatusDocument" [term]="service.searchTerm">
+                      </ngb-highlight>
+                    </span>
+                  </td>
+                  <td>
+                    <a (click)="passDocument(doc)" href="javascript:void(0);">
+                      <ngb-highlight [result]="doc.id_interno" [term]="service.searchTerm">
+                      </ngb-highlight>
+                    </a>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.id_tipo_documento" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.num_serie" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.num_correlativo" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>     
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_emision | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.factura_origen_serie" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  <td>
+                    <ngb-highlight [result]="doc.factura_origen_correlativo" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.id_tipo_moneda" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td style="text-align: right;">
+                    <ngb-highlight [result]="doc.monto_subtotal_afecto | number:'1.2-2'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+    
+                  <td style="text-align: right;">
+                    <ngb-highlight [result]="doc.monto_subtotal_inafecto | number:'1.2-2'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  <td style="text-align: right;">
+                    <ngb-highlight [result]="doc.monto_isc | number:'1.2-2'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  <td style="text-align: right;">
+                    <ngb-highlight [result]="doc.iva | percent" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  
+                  <td style="text-align: right;">
+                    <ngb-highlight [result]="doc.monto_igv | number:'1.2-2'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td  style="text-align: right;">
+                    <ngb-highlight [result]="doc.monto_total | number:'1.2-2'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.ruc_empresa_proveedor" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  <td>
+                    <ngb-highlight [result]="doc.razon_social_proveedor" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.id_orden_compra" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>    
+                  <td>
+                    <ngb-highlight [result]="doc.nro_conformidad_oc" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.ruc_empresa_cliente" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td> 
+                  <td>
+                    <ngb-highlight [result]="doc.razon_social_cliente" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.ceco" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+    
+                  <td>
+                    <ngb-highlight [result]="doc.orden" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.id_tipo_detracciones" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  
+                  <td>
+                    <ngb-highlight [result]="doc.factura_negociable|EmitTypeNegociable" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.fis_elec|EmitTypeDocuments" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+    
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>  
+                  
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_verificacion | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.usuario_verificacion" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_verificacion | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.hora_verificacion" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_transferencia | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_contabilizacion | date: 'dd/MM/yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.nro_registro_contable" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_verificacion | date: 'yyyy'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+                  <td>
+                    <ngb-highlight [result]="doc.fecha_verificacion | date: 'MM'" [term]="service.searchTerm">
+                    </ngb-highlight>
+                  </td>
+    
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+                <!-- <div class="d-flex justify-content-between p-2"> -->
+                <div class="col-md-12">
+                  <ngb-pagination
+                    [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
+                  </ngb-pagination>
+                </div>
+
+               
+                    
+                  
+            </div>
+            <div class="row">
+                <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+                  <option [ngValue]="10">10 Items</option>
+                  <option [ngValue]="20">20 items</option>
+                  <option [ngValue]="50">50 items</option>
+                </select>
+              </div>
+            
+          
+          </form>
+      </div>
+    </div>
+    

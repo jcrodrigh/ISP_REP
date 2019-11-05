@@ -1,0 +1,141 @@
+
+
+<div class="row">
+    <div class="col-md-3 mr-0 pr-0" >
+       <enterprise-list #ListEnterprise 
+            (ruc_empresas_emmiter)="passClientEnterprise($event)"></enterprise-list>
+        
+    </div>
+
+    <div class="col-md-9 ml-0">
+        
+        <documents-table #DocumentTable></documents-table>
+    </div>
+</div>
+
+
+
+<!--
+<div class="row">
+    <!-- <div class="col-md-4">
+        <ul *ngFor="let nesdoc of _nestedDocumentsToApprove">
+            
+            <li>{{nesdoc.ruc_empresa_cliente}}&nbsp;-&nbsp;{{nesdoc.razon_social_cliente}}</li>
+              <ul *ngFor="let ord of nesdoc.orden_compra">
+                <li *ngIf="ord.id_orden_compra!='--'" >{{ord.id_orden_compra}}&nbsp;-&nbsp;Acumulación:{{ord.monto_acumulado}}/{{ord.monto_orden_compra}}
+                    <ul *ngFor="let doc of ord.documento">                            
+                        <li (click)="ver_documento(doc)">
+                            {{doc.razon_social_proveedor}} 
+                            ({{doc.ruc_empresa_proveedor}})<br>
+                            {{doc.id_tipo_documento}} &nbsp;&nbsp;&nbsp;
+                            {{doc.id_documento}}
+                        </li>
+                    </ul>
+                </li>
+                <li *ngIf="ord.id_orden_compra=='--'">Sin Orden De Compra
+                        <ul *ngFor="let doc of ord.documento">
+                            <li (click)="ver_documento(doc)">
+                                {{doc.razon_social_proveedor}} 
+                                ({{doc.ruc_empresa_proveedor}})<br>
+                                {{doc.id_tipo_documento}} &nbsp;&nbsp;&nbsp;
+                                {{doc.id_documento}}
+                            </li>
+                        </ul>
+                    </li>
+              </ul>            
+          </ul>
+    </div> 
+    <div class="col-md-3">
+        <ul>  
+            <li  *ngFor="let ent of _dataBasicEnterprise">
+                <span  class="btn btn-pill btn-block btn-info" 
+                        [ngClass]="!_ActiveClients[ent.ruc_empresa]?'':'active'"
+                        (click)="showProviders(ent.ruc_empresa)">
+                    <i [ngClass]="_ActiveClients[ent.ruc_empresa]?'fa fa-chevron-down':'fa fa-chevron-up'"></i>
+                    [{{ent.ruc_empresa}}] {{ent.razon_social}}
+                </span>
+                <ul *ngIf="_EnterpricesProviderByClient[ent.ruc_empresa] && _ActiveClients[ent.ruc_empresa]">
+                    <li *ngFor="let entpro of _EnterpricesProviderByClient[ent.ruc_empresa]">
+                        <!-- <i [ngClass]="_ActiveClients[entx.ruc_empresa]?'fa fa-chevron-down':'fa fa-chevron-up'"></i> 
+                        <span  class="btn btn-pill btn-block btn-secondary" 
+                        [ngClass]="!_ActiveProvider[ent.ruc_empresa+' '+entpro.ruc_empresa]?'':'active'"
+                        (click)="_ActiveProvider[ent.ruc_empresa+' '+entpro.ruc_empresa]=!_ActiveProvider[ent.ruc_empresa+' '+entpro.ruc_empresa]">
+                            <i [ngClass]="_ActiveProvider[ent.ruc_empresa+' '+entpro.ruc_empresa]?'fa fa-chevron-down':'fa fa-chevron-up'"></i>
+                            [{{entpro.ruc_empresa}}] {{entpro.razon_social}}
+                        </span>   
+                        <ul *ngIf="_ActiveProvider[ent.ruc_empresa+' '+entpro.ruc_empresa]">
+                            <li>
+                                <span class="btn btn-pill btn-block btn-outline-warning"
+                                    [ngClass]="_DocActivePending[ent.ruc_empresa+' '+entpro.ruc_empresa]?'active':''"
+                                    (click)="showOptionsByProvider(ent.ruc_empresa,entpro.ruc_empresa,1)">
+                                    Pendientes
+                                </span>
+                            </li>
+                            <li>
+                                <span class="btn btn-pill btn-block btn-outline-success"
+                                    [ngClass]="_DocActiveApprove[ent.ruc_empresa+' '+entpro.ruc_empresa]?'active':''"
+                                    (click)="showOptionsByProvider(ent.ruc_empresa,entpro.ruc_empresa,2)">
+                                    Aprovado
+                                </span>
+                            </li>
+                            <li>
+                                <span class="btn btn-pill btn-block btn-outline-danger"
+                                    [ngClass]="_DocActiveObservations[ent.ruc_empresa+' '+entpro.ruc_empresa]?'active':''"
+                                    (click)="showOptionsByProvider(ent.ruc_empresa,entpro.ruc_empresa,3)">
+                                    Rechazado
+                                </span>
+                            </li>
+                        </ul> 
+                        
+                    </li>
+                </ul>
+            </li>   
+        </ul>
+
+    </div>
+    <div class="col-md-9">
+        <div *ngIf="_DataTableDocuments">
+            <div>
+                <table  class="table">
+                    <thead>
+                        <tr>
+                            <td>Tipo Documento</td>
+                            <td>Número interno</td>
+                            <td>Número documento</td>
+                            <td>Fis Elec</td>
+                            <td>FEcha Emisión</td>
+                            <td>Monto Subtotal</td>
+                            <td>Monto Total</td>
+                            <td>Orden De compra</td>
+                            <td>Monto Orden de compra</td>
+                            <td>Monto Acumulado Orden de compra</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let doc of _DataTableDocuments" (click)="openModal(doc.id_interno)">
+                            <td>{{doc.id_tipo_documento|ShortNameTypeDocuments}}</td>
+                            <td>{{doc.id_interno}}</td>
+                            <td ><a>{{doc.id_documento}}</a></td>
+                            <td >
+                                <a *ngIf="!doc.fis_elec">Físico</a>
+                                <a *ngIf="doc.fis_elec">Electrónico</a>
+                            </td>
+                            <td ><a>{{doc.fecha_emision}}</a></td>
+                            <td ><a>{{doc.monto_subtotal_documento}}</a></td>
+                            <td ><a>{{doc.monto_total_documento}}</a></td>
+                            <td ><a>{{doc.id_orden_compra}}</a></td>
+                            <td ><a>{{doc.monto_orden_compra}}</a></td>
+                            <td ><a>{{doc.monto_acumulado}}</a></td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+-->
+
+

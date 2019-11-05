@@ -1,0 +1,14 @@
+.fondo
+{ 
+
+  
+  background: #e3e3e3;
+  background: -moz-radial-gradient(center, ellipse cover, hsla(0,0%,89%,1) 0%, hsla(0,0%,89%,1) 15%, hsla(0,0%,89%,1) 39%, hsla(0,0%,86%,1) 59%, hsla(0,0%,82%,1) 86%, hsla(0,0%,86%,1) 93%);
+  background: -webkit-radial-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, hsla(0,0%,89%,1)), color-stop(15%, hsla(0,0%,89%,1)), color-stop(39%, hsla(0,0%,89%,1)), color-stop(59%, hsla(0,0%,86%,1)), color-stop(86%, hsla(0,0%,82%,1)), color-stop(93%, hsla(0,0%,86%,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, hsla(0,0%,89%,1) 0%, hsla(0,0%,89%,1) 15%, hsla(0,0%,89%,1) 39%, hsla(0,0%,86%,1) 59%, hsla(0,0%,82%,1) 86%, hsla(0,0%,86%,1) 93%);
+  background: -o-radial-gradient(center, ellipse cover, hsla(0,0%,89%,1) 0%, hsla(0,0%,89%,1) 15%, hsla(0,0%,89%,1) 39%, hsla(0,0%,86%,1) 59%, hsla(0,0%,82%,1) 86%, hsla(0,0%,86%,1) 93%);
+  background: -ms-radial-gradient(center, ellipse cover, hsla(0,0%,89%,1) 0%, hsla(0,0%,89%,1) 15%, hsla(0,0%,89%,1) 39%, hsla(0,0%,86%,1) 59%, hsla(0,0%,82%,1) 86%, hsla(0,0%,86%,1) 93%);
+  background: radial-gradient(ellipse at center, hsla(0,0%,89%,1) 0%, hsla(0,0%,89%,1) 15%, hsla(0,0%,89%,1) 39%, hsla(0,0%,86%,1) 59%, hsla(0,0%,82%,1) 86%, hsla(0,0%,86%,1) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#dbdbdb', GradientType=1 );
+  /* background: chocolate; */
+}

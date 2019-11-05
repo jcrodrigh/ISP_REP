@@ -1,0 +1,41 @@
+<div bsModal #UploadImageModal="bs-modal"
+     class="modal fade"
+     tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h4 class="modal-title pull-left">{{title}}</h4> -->
+        <!--button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+          <span aria-hidden="true">&times;</span>
+        </button-->
+      </div>
+      <div class="modal-body fondo">
+
+        <div *ngFor="let doc of documentWithoutImage" >
+          <div class="row">
+            <div class="col-md-6">
+              <document-data [documentWithoutImage]="doc" [showButtons]="_showButtons"></document-data>
+            </div>
+            <div class="col-md-6">
+              <document-display
+                [doc]="doc"
+              ></document-display>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <div class="pull-right">
+            <button type="button" class="btn btn-primary" (click)="FinalizarEvento()" >Finalizar</button>
+        </div>
+        <!-- <div class="pull-left">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

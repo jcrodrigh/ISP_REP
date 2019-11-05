@@ -1,0 +1,41 @@
+<document-card #UploadImage></document-card>
+<h1>Tabla De rechazados</h1>
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0"
+width="100%">
+  <thead>
+  <tr>
+    <td>#</td>
+    <td>Tipo Documento</td>
+    <td>Serie</td>
+    <td>Correlativo</td>
+    <td>RUC cliente</td>
+    <td>Estado</td>
+    <td>Precio Venta</td>
+    <td>Subtotal Inafecto</td>
+    <td>IGV</td>
+    <td>ISC</td>
+    <td>Total</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let doc of _documentsWithErrors">
+    <td><a href="javascript:void(0);">{{doc.id_documento_errores}}</a></td>
+    <td>{{doc.documento.id_tipo_documento | ShortNameTypeDocuments}}</td>
+    <td>{{doc.documento.num_serie}}</td>
+    <td>{{doc.documento.num_correlativo}}</td>
+    <td>{{doc.documento.ruc_empresa_cliente}}</td>    
+    <td>
+        <span class="badge badge-danger">
+            Rechazado
+        </span>         
+    </td>
+    <td>{{doc.documento.monto_subtotal_afecto}}</td>
+    <td>{{doc.documento.monto_subtotal_inafecto}}</td>
+    <td>{{doc.documento.monto_igv}}</td>
+    <td>{{doc.documento.monto_isc}}</td>
+    <td>{{doc.documento.monto_total}}</td>
+  </tr>
+  </tbody>
+
+</table>

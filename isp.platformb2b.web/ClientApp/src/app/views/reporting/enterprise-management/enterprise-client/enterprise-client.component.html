@@ -1,0 +1,104 @@
+
+<app-enterprise-modal #enterpriseModal></app-enterprise-modal>
+
+<button (click) = "crear_empresa()">
+    añadir Empresa
+</button>
+
+
+
+<form>
+        <div  class="table-responsive">
+          <table class="table table-striped header-color">
+            <thead>
+            <tr>
+              <th scope="col" sortable="ruc_empresa" (sort)="onSort($event)">RUC Empresa</th>
+              <th scope="col" sortable="razon_social" (sort)="onSort($event)">Razón Social</th>
+              <th></th>
+            </tr>
+            </thead>
+          
+          <tbody>
+    
+                <tr *ngFor="let ent of enterprices$ | async">
+                  <td>
+                    <ngb-highlight [result]="ent.ruc_empresa" [term]="service.searchTerm">
+                    </ngb-highlight>                    
+                  </td>
+                  <td>
+                      <ngb-highlight [result]="ent.razon_social" [term]="service.searchTerm">
+                      </ngb-highlight>                    
+                  </td>
+                  <td>
+                    <i class="fa fa-pencil" (click) ="actualizar_empresa(ent)">
+
+                    </i>
+                      <i class="fa fa-window-close" (click)="modal_rechazar_empresa(ent)">
+
+                      </i>
+                  </td>
+                </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <ngb-pagination
+                  [collectionSize]="total$ | async" [(page)]="service.page" [pageSize]="service.pageSize">
+                </ngb-pagination>
+              </div>
+        </div>
+        <div class="row">
+            <!-- <div class="d-flex justify-content-between p-2"> -->
+            
+            <!-- <div  class="col-md-4">
+              <div class="form-group form-inline">
+                  Criterio de busqueda local: <input class="form-control ml-2" type="text" name="searchTerm" [(ngModel)]="service.searchTerm"/>
+                  <span class="ml-3" *ngIf="service.loading$ | async">Espere...</span>
+              </div>
+            </div> -->
+              
+            <div class="col-md-12">
+              <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="service.pageSize">
+                <option [ngValue]="10">10 Items</option>
+                <option [ngValue]="20">20 items</option>
+                <option [ngValue]="50">50 items</option>
+              </select>
+            </div>
+                
+              
+        </div>
+</form>
+
+
+
+
+
+
+<swal
+    #SuccessSwal
+    
+    text="Se subió con exito"
+    type="success"
+    [showCancelButton]="false"
+    [focusCancel]="true"
+    html=""
+    (confirm)="refresh()"
+    
+    
+    >
+</swal>
+
+<swal
+    #DeleteSwal
+    title="Desactivar Empresa"
+    text="Desea eliminar la Empresa Cliente?"
+    type="question"
+    [showCancelButton]="true"
+    [focusCancel]="true"
+    html=""
+    (confirm)="desactivar_empresa()"
+    
+    >
+</swal>

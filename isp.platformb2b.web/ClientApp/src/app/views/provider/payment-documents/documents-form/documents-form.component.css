@@ -1,0 +1,54 @@
+input.ng-invalid.ng-touched,select.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  
+  span.alert
+  {
+      color: red;
+  }
+  
+  input.ng-valid.ng-touched,select.ng-valid.ng-touched{
+    border: 1px solid greenyellow;
+  }
+  
+  .paneles 
+  {
+    border-style: dotted;
+    border-width:0.5px;
+    border-color: gray;
+  }
+  
+  .form-group
+  {
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+  }
+
+  .image-upload>input {
+    display: none;
+  }
+
+  #nube {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+
+  #documento 
+  {
+    width: 100%;
+  }
+
+  #fondo_formulario
+  {
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  option:disabled {
+    background: #ccc;
+    width: 500px;
+    padding: 5px;
+    }

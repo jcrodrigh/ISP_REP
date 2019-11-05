@@ -1,0 +1,94 @@
+<dl class="row" *ngIf="_mascara">
+
+        <dt class="col-sm-5">Ruc Cliente</dt>
+        <dd class="col-sm-7">{{documentWithoutImage.ruc_empresa_cliente}}</dd>
+         <ng-template #ruc_empresa_cliente><dd class="col-sm-7">--</dd></ng-template>
+
+  <dt class="col-sm-5">Tipo Documento</dt>
+  <dd class="col-sm-7"> [{{documentWithoutImage.id_tipo_documento}}]
+      {{_mascara.nombre_documento}}
+    </dd>
+   <ng-template #id_tipo_documento><dd class="col-sm-7">--</dd></ng-template>
+
+   <dt class="col-sm-5">N° Serie</dt>
+   <dd class="col-sm-7">{{documentWithoutImage.num_serie}}</dd>
+   <ng-template #num_serie><dd class="col-sm-7">--</dd></ng-template>
+
+   <dt class="col-sm-5">N° Comprobante de Pago</dt>
+   <dd class="col-sm-7">{{documentWithoutImage.num_correlativo}}</dd>
+   <ng-template #num_correlativo><dd class="col-sm-7">--</dd></ng-template>   
+
+  
+  
+
+  <dt class="col-sm-5" *ngIf="_mascara.factura_origen">N° Serie Factura Origen</dt>  <dd 
+   class="col-sm-7" *ngIf="_mascara.factura_origen">{{documentWithoutImage.factura_origen_serie}}</dd>
+  <ng-template #factura_origen_serie><dd class="col-sm-7">--</dd></ng-template> 
+
+  <dt class="col-sm-5" *ngIf="_mascara.factura_origen">N° Factura Origen</dt>
+  <dd class="col-sm-7" *ngIf="_mascara.factura_origen">{{documentWithoutImage.factura_origen_correlativo}}</dd>
+  <ng-template *ngIf="_mascara.factura_origen" #factura_origen_correlativo><dd class="col-sm-7">--</dd></ng-template> 
+
+  
+  <dt class="col-sm-5" *ngIf="_mascara.orden_compra_requerido">N° Orden Compra</dt>
+  <dd class="col-sm-7" *ngIf="_mascara.orden_compra_requerido">{{documentWithoutImage.id_orden_compra}}</dd>
+   <ng-template #id_orden_compra *ngIf="_mascara.orden_compra_requerido"><dd class="col-sm-7">--</dd></ng-template>
+
+  <dt  class="col-sm-5">Fecha emision</dt>
+  <dd class="col-sm-7">{{documentWithoutImage.fecha_emision | date: 'dd/MM/yyyy'}}</dd>
+  <ng-template #fecha_emision><dd class="col-sm-7">--</dd></ng-template> 
+  
+  <dt class="col-sm-5">Moneda</dt>
+  <dd class="col-sm-7">{{documentWithoutImage.id_tipo_moneda}}</dd>
+  <ng-template #id_tipo_moneda><dd class="col-sm-7">--</dd></ng-template> 
+
+  <dt class="col-sm-5">{{_mascara.nombre_afecto}}</dt>
+  <dd class="col-sm-7">{{documentWithoutImage.monto_subtotal_afecto | number:'1.2-2' }}</dd>
+   <ng-template #monto_subtotal_afecto><dd class="col-sm-7">--</dd></ng-template>
+
+  <dt class="col-sm-5"  *ngIf="!_mascara.valor_venta_requerido">Valor Inafecto</dt>
+  <dd class="col-sm-7"  *ngIf="!_mascara.valor_venta_requerido">{{documentWithoutImage.monto_subtotal_inafecto | number:'1.2-2' }}</dd>
+  <ng-template  *ngIf="!_mascara.valor_venta_requerido"#monto_subtotal_inafecto><dd class="col-sm-7">--</dd></ng-template>
+
+  <dt class="col-sm-5" *ngIf="_mascara.monto_isc">ISC</dt>
+  <dd class="col-sm-7" *ngIf="_mascara.monto_isc">{{documentWithoutImage.monto_isc | number:'1.2-2' }}</dd>
+   <ng-template  *ngIf="_mascara.monto_isc" #monto_isc><dd class="col-sm-7">--</dd></ng-template>
+ 
+  <dt  class="col-sm-5" *ngIf="!_mascara.valor_venta_requerido">IGV</dt>
+  <dd class="col-sm-7" *ngIf="!_mascara.valor_venta_requerido">{{documentWithoutImage.monto_igv | number:'1.2-2' }}</dd>
+  <ng-template *ngIf="!_mascara.valor_venta_requerido" #monto_igv><dd class="col-sm-7">--</dd></ng-template>
+  
+  <dt class="col-sm-5">Valor Total</dt>
+  <dd class="col-sm-7">{{documentWithoutImage.monto_total | number:'1.2-2' }}</dd>
+   <ng-template #monto_total><dd class="col-sm-7">--</dd></ng-template>
+
+
+   
+
+</dl>
+
+
+<!--
+<dl class="row" *ngIf="invoiceForm != undefined">
+  <dt *ngIf="invoiceForm.id_tipo_documento" class="col-sm-3">Tipo de Documento</dt>
+  <dd *ngIf="invoiceForm.id_tipo_documento"
+      class="col-sm-9">{{documentWithoutImage.id_tipo_documento | ShortNameTypeDocuments}}</dd>
+  <dt *ngIf="invoiceForm.num_serie" class="col-sm-3">Serie</dt>
+  <dd *ngIf="invoiceForm.num_serie" class="col-sm-9">{{documentWithoutImage.num_serie}}</dd>
+  <dt *ngIf="invoiceForm.fecha_emision" class="col-sm-3">Fecha emision</dt>
+  <dd *ngIf="invoiceForm.fecha_emision"
+      class="col-sm-9">{{documentWithoutImage.fecha_emision | date: 'dd/MM/yyyy'}}</dd>
+  <dt *ngIf="invoiceForm.id_tipo_moneda" class="col-sm-3">Moneda</dt>
+  <dd *ngIf="invoiceForm.id_tipo_moneda"
+      class="col-sm-9">{{documentWithoutImage.id_tipo_moneda}}</dd>
+  <dt *ngIf="invoiceForm.monto_subtotal_afecto" class="col-sm-3">Monto SubTotal</dt>
+  <dd *ngIf="invoiceForm.monto_subtotal_afecto"
+      class="col-sm-9">{{documentWithoutImage.monto_subtotal_afecto + documentWithoutImage.monto_subtotal_inafecto + documentWithoutImage.monto_isc}}</dd>
+  <dt *ngIf="invoiceForm.monto_igv" class="col-sm-3">Monto IGV</dt>
+  <dd *ngIf="invoiceForm.monto_igv" class="col-sm-9">{{documentWithoutImage.monto_igv}}</dd>
+  <dt *ngIf="invoiceForm.monto_total" class="col-sm-3">Monto Total</dt>
+  <dd *ngIf="invoiceForm.monto_total" class="col-sm-9">{{documentWithoutImage.monto_total}}</dd>
+  <dt *ngIf="invoiceForm.ruc_empresa_proveedor" class="col-sm-3">Ruc Proveedor</dt>
+  <dd *ngIf="invoiceForm.ruc_empresa_proveedor" class="col-sm-9">{{documentWithoutImage.ruc_empresa_proveedor}}</dd>
+</dl>
+-->
