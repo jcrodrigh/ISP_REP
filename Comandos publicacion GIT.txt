@@ -1,0 +1,1380 @@
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop
+$ mkdir isp.platformb2b
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop
+$ cd isp.platformb2b
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b
+$ git init
+Initialized empty Git repository in C:/Users/jcrh3/Desktop/isp.platformb2b/.git/
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git add .
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/Audit.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/Empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/auditorias.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/documento.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/documento_errores.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/orden_compra.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/persona.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_empresa_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_empresa_erp.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_empresa_persona.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_roles_menu.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_tipo_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/ti_usuario_roles.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_detracciones.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_documento.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_documento_devolucion.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_documento_estado.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_documento_serie.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_empresa_erp.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_menu.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_moneda.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/tipo_roles.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/DatabaseModels/usuario.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/EFDataContext.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190822085040_NewMigration.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190822085040_NewMigration.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190826232239_NewMigration2.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190826232239_NewMigration2.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190827115940_NewMigration3.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190827115940_NewMigration3.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190827125314_NewMigration4.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190827125314_NewMigration4.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190902182423_Migration1.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190902182423_Migration1.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190902214241_Migration2.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190902214241_Migration2.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190903002836_Migration3.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190903002836_Migration3.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190903195908_Migration4.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190903195908_Migration4.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190907204905_Migrationx1.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190907204905_Migrationx1.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190908005222_Migrationx2.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190908005222_Migrationx2.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190908013131_Migrationx3.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190908013131_Migrationx3.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910150333_new1.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910150333_new1.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910171530_new2.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910171530_new2.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910190636_new3.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190910190636_new3.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190911211703_new4.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190911211703_new4.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190913155709_new5.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190913155709_new5.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190915061639_new6.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190915061639_new6.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190920170318_new7.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190920170318_new7.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190921001104_new8.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190921001104_new8.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190923235815_new9.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190923235815_new9.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190924212346_new10.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190924212346_new10.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190925231654_New11.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190925231654_New11.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190927174655_New12.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20190927174655_New12.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191001234115_New13.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191001234115_New13.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191003012543_New14.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191003012543_New14.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191004201529_New15.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191004201529_New15.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191004225923_New16.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191004225923_New16.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191009231831_new17.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191009231831_new17.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191011211022_new18.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191011211022_new18.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191015231632_xx1.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191015231632_xx1.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191017230127_xx2.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191017230127_xx2.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191018205436_xx3.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191018205436_xx3.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191021220545_xx4.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191021220545_xx4.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191021231742_xx5.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191021231742_xx5.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191025204006_xx6.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191025204006_xx6.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027053854_gi01.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027053854_gi01.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027140456_gi02.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027140456_gi02.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027152615_gi03.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191027152615_gi03.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191028171627_gi04.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191028171627_gi04.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191030175833_gi05.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191030175833_gi05.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191031145415_gi07.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191031145415_gi07.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191105101123_gi06.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191105101123_gi06.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191105224330_jj5.Designer.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/20191105224330_jj5.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Migrations/EFDataContextModelSnapshot.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_orden_compra.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_persona.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_ti_empresa_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_ti_roles_menu.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_ti_tipo_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_ti_usuario_roles.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_detraccion.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_documento.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_documento_devolucion.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_documento_estado.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_documento_serie.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_empresa.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_empresa_erp.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_menu.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_moneda.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_tipo_rol.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/Seeders/seed_usuario.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.data/isp.platformb2b.data.csproj.
+The file will have its original line endings in your working directory
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "primera migracion"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jcrh3@LAPTOP-ANK8NMTD.(none)')
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "primera migracion"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jcrh3@LAPTOP-ANK8NMTD.(none)')
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ ^C
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ ^C
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$  git config --global user.name "jcrodrigh"
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'origin'
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git remote add origin https://github.com/jcrodrigh/ISP_REP.git
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/jcrodrigh/ISP_REP.git'
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ ~/Desktop/isp.platformb2b
+bash: /c/Users/jcrh3/Desktop/isp.platformb2b: Is a directory
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git remote add origin https://github.com/jcrodrigh/ISP_REP.git
+fatal: remote origin already exists.
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/jcrodrigh/ISP_REP.git'
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ ^C
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git remote add origin git@github.com:jcrodrigh/ISP_REP
+fatal: remote origin already exists.
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git remote add origin git@github.com:jcrodrigh/platformb2b
+fatal: remote origin already exists.
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git remote add origin https://github.com/jcrodigh/paltformb2b
+fatal: remote origin already exists.
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/jcrodrigh/ISP_REP.git'
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ ^C
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git fetch origin
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/jcrodrigh/ISP_REP.git'
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "migration\"
+>
+> ^C
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "migration"
+
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jcrh3@LAPTOP-ANK8NMTD.(none)')
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git config --global user.email "rodriguez.jc2@pucp.pe"
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "migration"
+[master (root-commit) d63ffc5] migration
+ 131 files changed, 253038 insertions(+)
+ create mode 100644 isp.platformb2b.data/DatabaseModels/Audit.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/Empresa.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/auditorias.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/documento.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/documento_errores.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/orden_compra.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/persona.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_empresa_empresa.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_empresa_erp.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_empresa_persona.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_roles_menu.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_tipo_empresa.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/ti_usuario_roles.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_detracciones.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_documento.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_documento_devolucion.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_documento_estado.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_documento_serie.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_empresa.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_empresa_erp.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_menu.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_moneda.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/tipo_roles.cs
+ create mode 100644 isp.platformb2b.data/DatabaseModels/usuario.cs
+ create mode 100644 isp.platformb2b.data/EFDataContext.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190822085040_NewMigration.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190822085040_NewMigration.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190826232239_NewMigration2.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190826232239_NewMigration2.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190827115940_NewMigration3.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190827115940_NewMigration3.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190827125314_NewMigration4.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190827125314_NewMigration4.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190902182423_Migration1.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190902182423_Migration1.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190902214241_Migration2.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190902214241_Migration2.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190903002836_Migration3.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190903002836_Migration3.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190903195908_Migration4.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190903195908_Migration4.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190907204905_Migrationx1.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190907204905_Migrationx1.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190908005222_Migrationx2.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190908005222_Migrationx2.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190908013131_Migrationx3.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190908013131_Migrationx3.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910150333_new1.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910150333_new1.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910171530_new2.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910171530_new2.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910190636_new3.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190910190636_new3.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190911211703_new4.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190911211703_new4.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190913155709_new5.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190913155709_new5.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190915061639_new6.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190915061639_new6.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190920170318_new7.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190920170318_new7.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190921001104_new8.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190921001104_new8.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190923235815_new9.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190923235815_new9.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190924212346_new10.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190924212346_new10.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190925231654_New11.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190925231654_New11.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190927174655_New12.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20190927174655_New12.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191001234115_New13.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191001234115_New13.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191003012543_New14.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191003012543_New14.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191004201529_New15.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191004201529_New15.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191004225923_New16.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191004225923_New16.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191009231831_new17.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191009231831_new17.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191011211022_new18.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191011211022_new18.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191015231632_xx1.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191015231632_xx1.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191017230127_xx2.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191017230127_xx2.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191018205436_xx3.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191018205436_xx3.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191021220545_xx4.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191021220545_xx4.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191021231742_xx5.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191021231742_xx5.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191025204006_xx6.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191025204006_xx6.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027053854_gi01.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027053854_gi01.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027140456_gi02.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027140456_gi02.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027152615_gi03.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191027152615_gi03.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191028171627_gi04.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191028171627_gi04.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191030175833_gi05.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191030175833_gi05.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191031145415_gi07.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191031145415_gi07.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191105101123_gi06.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191105101123_gi06.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191105224330_jj5.Designer.cs
+ create mode 100644 isp.platformb2b.data/Migrations/20191105224330_jj5.cs
+ create mode 100644 isp.platformb2b.data/Migrations/EFDataContextModelSnapshot.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_empresa.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_orden_compra.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_persona.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_ti_empresa_empresa.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_ti_roles_menu.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_ti_tipo_empresa.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_ti_usuario_roles.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_detraccion.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_documento.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_documento_devolucion.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_documento_estado.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_documento_serie.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_empresa.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_empresa_erp.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_menu.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_moneda.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_tipo_rol.cs
+ create mode 100644 isp.platformb2b.data/Seeders/seed_usuario.cs
+ create mode 100644 isp.platformb2b.data/isp.platformb2b.data.csproj
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push origin master
+Enumerating objects: 137, done.
+Counting objects: 100% (137/137), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (136/136), done.
+Writing objects: 100% (137/137), 124.87 KiB | 1.78 MiB/s, done.
+Total 137 (delta 88), reused 0 (delta 0)
+remote: Resolving deltas: 100% (88/88), done.
+To https://github.com/jcrodrigh/ISP_REP.git
+ * [new branch]      master -> master
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "first migration"
+On branch master
+Untracked files:
+        .dockerignore
+        .gitattributes
+        .gitignore
+        README.md
+        isp.platformb2b.models/
+        isp.platformb2b.sln
+        isp.platformb2b.web/
+        package-lock.json
+        stale_outputs_checked
+
+nothing added to commit but untracked files present
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git add .
+warning: LF will be replaced by CRLF in .dockerignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .gitattributes.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/AutoMapperConfiguration.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/DTOs/document.dto.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/DTOs/enterprice.dto.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/DTOs/user.dto.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/FluentValidationConfiguration.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/Helpers/AppSettings.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/Helpers/Auditoria.hlp.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/Helpers/Auditoria.model.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/Helpers/Tolerancia.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/IoC.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/MasterTables.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/PurchaseOrder.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/document.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/electronic.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/enterprice.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/user - Copia.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/UnitOfWork/user.uow.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/Document.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/Enterprise.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/KeyValue.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/PurcharseOrder.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/ResultMessage.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/Role.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/roles.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/user - Copia.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/entities/user.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.models/isp.platformb2b.models.csproj.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.sln.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/.gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/.editorconfig.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/.gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/README.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/angular.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/e2e/protractor.conf.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/e2e/src/app.e2e-spec.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/e2e/src/app.po.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/e2e/tsconfig.e2e.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/package-lock.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/package.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/proxy.conf.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/_nav.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_directive/directive.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_directive/sortable.directive.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_guards/enterprice.guard.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_helpers/error.interceptor.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_helpers/fake-backend.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_helpers/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_helpers/jwt.interceptor.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_helpers/loader.interceptor.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/PaymentDocument.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/_masks/Document.mask.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/enterprice.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/invoice.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/keysValues.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/purchase_order.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/resultMessage.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/role.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_models/user.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_pipes/PaymentDocument.pipe.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_pipes/currency.pipe.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_pipes/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_pipes/pipe.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/AuthEnterprice.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/Enterprice.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/ExportFile.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/LoaderService.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/MasterTables.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/PaymentDocument.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/invoice.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/purchase_order.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_services/user.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_shared/shared.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_styles/component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_styles/panel.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_styles/sidebar.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/_styles/table.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/app.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/app.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/app.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/app.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/app.server.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/loader/index.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.spec.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/Admin-IVM.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/Admin-IVM.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/document-errors-resume/documents-errors-resume.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/document-errors-resume/documents-errors-resume.componet.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Transfer/Transfer.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Transfer/Transfer.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/_utilitaries.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-errors-table/document-errors-table.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-errors-table/document-errors-table.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-filter/document-filter.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-filter/document-filter.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/sortable.directive.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/functions/documents.mask.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/functions/documents.names.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard-routing.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/login/login.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/login/login.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/login/login.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/document-resume/documents-resume.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/document-resume/documents-resume.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-excel/documents-excel.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.validation.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/payment-documents.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/payment-documents.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/sortable.directive.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/documentary-cycle/documentary-cycle.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/documentary-cycle/documentary-cycle.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.service.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/sortable.directive.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-management.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/ranking/ranking.component.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/ranking/ranking.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/reporting.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/reporting/reporting.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/user/user-logout/user-logout.component.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/user/user.module.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/app/views/user/user.routing.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/assets/img/brand/logo.svg.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/assets/img/brand/sygnet.svg.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/browserslist.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/environments/environment.prod.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/environments/environment.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/karma.conf.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/main.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/polyfills.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/scss/_custom.scss.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/scss/_variables.scss.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/scss/style.scss.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/scss/vendors/_variables.scss.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/scss/vendors/chart.js/chart.scss.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/styles.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/test.ts.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/tsconfig.app.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/tsconfig.server.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/tsconfig.spec.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/src/tslint.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/tsconfig.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/ClientApp/tslint.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/AuthController - Copia.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/AuthController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/DocumentController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/DocumentStatusController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/ElectronicController-antiguo.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/ElectronicController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/EnterpriceController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/ImportController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/MasterTablesController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Controllers/PurcharseOrderController.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Dockerfile.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/Document.Helper.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/Enumerator/document.enumerator.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/Services/documents-validation.service.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/Verify.Helper.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/create_excel.Helper.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/documento_sftp.Helper.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/documents-validation/document.validator.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/documents-validation/val-documents.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Helpers/export-errors.Helper.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Pages/Error.cshtml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Pages/Error.cshtml.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Pages/_ViewImports.cshtml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Program.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Properties/launchSettings.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/Startup.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/appsettings.Development.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/appsettings.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/entities/CredencialSmtp.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/entities/Login.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/entities/ResultMessage.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/entities/Role.cs.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/isp.platformb2b.web.csproj.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/package-lock.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in isp.platformb2b.web/wwwroot/20553510661-01-F001-1.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in package-lock.json.
+The file will have its original line endings in your working directory
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git commit -m "first migration"
+[master 24c15af] first migration
+ 290 files changed, 33745 insertions(+)
+ create mode 100644 .dockerignore
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 isp.platformb2b.models/AutoMapperConfiguration.cs
+ create mode 100644 isp.platformb2b.models/DTOs/document.dto.cs
+ create mode 100644 isp.platformb2b.models/DTOs/enterprice.dto.cs
+ create mode 100644 isp.platformb2b.models/DTOs/user.dto.cs
+ create mode 100644 isp.platformb2b.models/FluentValidationConfiguration.cs
+ create mode 100644 isp.platformb2b.models/Helpers/AppSettings.cs
+ create mode 100644 isp.platformb2b.models/Helpers/Auditoria.hlp.cs
+ create mode 100644 isp.platformb2b.models/Helpers/Auditoria.model.cs
+ create mode 100644 isp.platformb2b.models/Helpers/Tolerancia.cs
+ create mode 100644 isp.platformb2b.models/IoC.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/MasterTables.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/PurchaseOrder.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/document.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/electronic.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/enterprice.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/user - Copia.uow.cs
+ create mode 100644 isp.platformb2b.models/UnitOfWork/user.uow.cs
+ create mode 100644 isp.platformb2b.models/entities/Document.cs
+ create mode 100644 isp.platformb2b.models/entities/Enterprise.cs
+ create mode 100644 isp.platformb2b.models/entities/KeyValue.cs
+ create mode 100644 isp.platformb2b.models/entities/PurcharseOrder.cs
+ create mode 100644 isp.platformb2b.models/entities/ResultMessage.cs
+ create mode 100644 isp.platformb2b.models/entities/Role.cs
+ create mode 100644 isp.platformb2b.models/entities/roles.cs
+ create mode 100644 isp.platformb2b.models/entities/user - Copia.cs
+ create mode 100644 isp.platformb2b.models/entities/user.cs
+ create mode 100644 isp.platformb2b.models/isp.platformb2b.models.csproj
+ create mode 100644 isp.platformb2b.sln
+ create mode 100644 isp.platformb2b.web/.gitignore
+ create mode 100644 isp.platformb2b.web/2011111111920190905104754.jpg
+ create mode 100644 isp.platformb2b.web/2011111111920190905104754.png
+ create mode 100644 isp.platformb2b.web/ClientApp/.editorconfig
+ create mode 100644 isp.platformb2b.web/ClientApp/.gitignore
+ create mode 100644 isp.platformb2b.web/ClientApp/README.md
+ create mode 100644 isp.platformb2b.web/ClientApp/angular.json
+ create mode 100644 isp.platformb2b.web/ClientApp/e2e/protractor.conf.js
+ create mode 100644 isp.platformb2b.web/ClientApp/e2e/src/app.e2e-spec.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/e2e/src/app.po.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/e2e/tsconfig.e2e.json
+ create mode 100644 isp.platformb2b.web/ClientApp/package-lock.json
+ create mode 100644 isp.platformb2b.web/ClientApp/package.json
+ create mode 100644 isp.platformb2b.web/ClientApp/proxy.conf.json
+ create mode 100644 isp.platformb2b.web/ClientApp/src/_nav.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_directive/directive.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_directive/sortable.directive.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_guards/enterprice.guard.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_guards/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_helpers/error.interceptor.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_helpers/fake-backend.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_helpers/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_helpers/jwt.interceptor.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_helpers/loader.interceptor.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/PaymentDocument.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/_masks/Document.mask.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/enterprice.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/invoice.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/keysValues.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/purchase_order.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/resultMessage.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/role.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_models/user.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_pipes/PaymentDocument.pipe.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_pipes/currency.pipe.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_pipes/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_pipes/pipe.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/AuthEnterprice.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/Enterprice.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/ExportFile.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/LoaderService.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/MasterTables.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/PaymentDocument.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/invoice.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/purchase_order.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_services/user.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_shared/shared.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_styles/component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_styles/panel.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_styles/sidebar.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/_styles/table.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/app.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/app.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/app.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/app.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/app.server.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/default-layout/default-layout.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/default-layout/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/loader/index.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.spec.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/containers/loader/loader.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/Admin-IVM.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/Admin-IVM.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/admin-documents/admin-documents.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/document-errors-resume/documents-errors-resume.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Admin-IVM/document-errors-resume/documents-errors-resume.componet.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Transfer/Transfer.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Transfer/Transfer.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/Transfer/document-transfer-table/document-transfer-table.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/_utilitaries.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-data/document-data.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-display/document-display.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-errors-table/document-errors-table.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-errors-table/document-errors-table.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-filter/document-filter.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-filter/document-filter.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/document-table.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document-table/sortable.directive.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/document.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/functions/documents.mask.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/document/functions/documents.names.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/_utilitaries/enterprise/enterprise-list/enterprise-list.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard-routing.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/dashboard/dashboard.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/login/login.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/login/login.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/login/login.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/document-resume/documents-resume.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/document-resume/documents-resume.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-excel/documents-excel.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/documents-form/documents-form.validation.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/payment-documents.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/provider/payment-documents/payment-documents.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/document-management.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/document-management/sortable.directive.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/documentary-cycle/documentary-cycle.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/documentary-cycle/documentary-cycle.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/documentary-cycle/documentary-cycle.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-client.service.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/enterprise-modal/enterprise-modal.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-client/sortable.directive.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/enterprise-management/enterprise-management.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/ranking/ranking.component.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/ranking/ranking.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/ranking/ranking.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/reporting.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/reporting/reporting.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/user/user-logout/user-logout.component.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/user/user-logout/user-logout.component.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/user/user.module.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/app/views/user/user.routing.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/.gitkeep
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/favicon.ico
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/1.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/2.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/3.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/4.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/5.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/6.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/7.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/avatars/8.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/brand/logo.svg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/brand/sygnet.svg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ImportExcel.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/broken_documents.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/excel-icon.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/excel_download_errors.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/fondo_naranja - copia.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/fondo_naranja.jpg
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/icon_doc.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/icon_pdf.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_completo.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_completox.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_completoxx.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_letras.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_letrasx.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_logo.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/ivm_logox.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/logox.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/mox_chro.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/mozilla-chrome.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/subir_imagen.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/assets/img/logox/subir_imagenxxx.png
+ create mode 100644 isp.platformb2b.web/ClientApp/src/browserslist
+ create mode 100644 isp.platformb2b.web/ClientApp/src/environments/environment.prod.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/environments/environment.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/index.html
+ create mode 100644 isp.platformb2b.web/ClientApp/src/karma.conf.js
+ create mode 100644 isp.platformb2b.web/ClientApp/src/main.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/polyfills.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/scss/_custom.scss
+ create mode 100644 isp.platformb2b.web/ClientApp/src/scss/_variables.scss
+ create mode 100644 isp.platformb2b.web/ClientApp/src/scss/style.scss
+ create mode 100644 isp.platformb2b.web/ClientApp/src/scss/vendors/_variables.scss
+ create mode 100644 isp.platformb2b.web/ClientApp/src/scss/vendors/chart.js/chart.scss
+ create mode 100644 isp.platformb2b.web/ClientApp/src/styles.css
+ create mode 100644 isp.platformb2b.web/ClientApp/src/test.ts
+ create mode 100644 isp.platformb2b.web/ClientApp/src/tsconfig.app.json
+ create mode 100644 isp.platformb2b.web/ClientApp/src/tsconfig.server.json
+ create mode 100644 isp.platformb2b.web/ClientApp/src/tsconfig.spec.json
+ create mode 100644 isp.platformb2b.web/ClientApp/src/tslint.json
+ create mode 100644 isp.platformb2b.web/ClientApp/tsconfig.json
+ create mode 100644 isp.platformb2b.web/ClientApp/tslint.json
+ create mode 100644 isp.platformb2b.web/Controllers/AuthController - Copia.cs
+ create mode 100644 isp.platformb2b.web/Controllers/AuthController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/DocumentController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/DocumentStatusController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/ElectronicController-antiguo.cs
+ create mode 100644 isp.platformb2b.web/Controllers/ElectronicController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/EnterpriceController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/ImportController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/MasterTablesController.cs
+ create mode 100644 isp.platformb2b.web/Controllers/PurcharseOrderController.cs
+ create mode 100644 isp.platformb2b.web/Dockerfile
+ create mode 100644 isp.platformb2b.web/Helpers/Document.Helper.cs
+ create mode 100644 isp.platformb2b.web/Helpers/Enumerator/document.enumerator.cs
+ create mode 100644 isp.platformb2b.web/Helpers/Services/documents-validation.service.cs
+ create mode 100644 isp.platformb2b.web/Helpers/Verify.Helper.cs
+ create mode 100644 isp.platformb2b.web/Helpers/create_excel.Helper.cs
+ create mode 100644 isp.platformb2b.web/Helpers/documento_sftp.Helper.cs
+ create mode 100644 isp.platformb2b.web/Helpers/documents-validation/document.validator.cs
+ create mode 100644 isp.platformb2b.web/Helpers/documents-validation/val-documents.cs
+ create mode 100644 isp.platformb2b.web/Helpers/export-errors.Helper.cs
+ create mode 100644 isp.platformb2b.web/Pages/Error.cshtml
+ create mode 100644 isp.platformb2b.web/Pages/Error.cshtml.cs
+ create mode 100644 isp.platformb2b.web/Pages/_ViewImports.cshtml
+ create mode 100644 isp.platformb2b.web/Program.cs
+ create mode 100644 isp.platformb2b.web/Properties/launchSettings.json
+ create mode 100644 isp.platformb2b.web/Startup.cs
+ create mode 100644 isp.platformb2b.web/appsettings.Development.json
+ create mode 100644 isp.platformb2b.web/appsettings.json
+ create mode 100644 isp.platformb2b.web/entities/CredencialSmtp.cs
+ create mode 100644 isp.platformb2b.web/entities/Login.cs
+ create mode 100644 isp.platformb2b.web/entities/ResultMessage.cs
+ create mode 100644 isp.platformb2b.web/entities/Role.cs
+ create mode 100644 isp.platformb2b.web/isp.platformb2b.web.csproj
+ create mode 100644 isp.platformb2b.web/package-lock.json
+ create mode 100644 isp.platformb2b.web/wwwroot/20553510661-01-F001-1.xml
+ create mode 100644 isp.platformb2b.web/wwwroot/20553510661-03-B001-1.xml
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20000000009.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20111111119.png
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20222222229.png
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20333333339.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20444444449.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20555555559.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20666666669.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20777777779.png
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20888888889.jpg
+ create mode 100644 isp.platformb2b.web/wwwroot/Logos/20999999999.png
+ create mode 100644 isp.platformb2b.web/wwwroot/Thumbs.db
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/Nuevo documento de texto.txt
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/plantalla ivm.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/plantilla ivm.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/plantilla ivm1.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/plantilla ivm2.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/Utilitarios/plantilla ivm3.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/favicon.ico
+ create mode 100644 isp.platformb2b.web/wwwroot/temp/20191018121141.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/temp/20191018123028.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/temp/20191022100238.xlsx
+ create mode 100644 isp.platformb2b.web/wwwroot/temp/20191022123657.xlsx
+ create mode 100644 package-lock.json
+ create mode 100644 stale_outputs_checked
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push origin master
+Enumerating objects: 359, done.
+Counting objects: 100% (359/359), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (341/341), done.
+Writing objects: 100% (358/358), 5.59 MiB | 286.00 KiB/s, done.
+Total 358 (delta 45), reused 0 (delta 0)
+remote: Resolving deltas: 100% (45/45), done.
+To https://github.com/jcrodrigh/ISP_REP.git
+   d63ffc5..24c15af  master -> master
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+jcrh3@LAPTOP-ANK8NMTD MINGW64 ~/Desktop/isp.platformb2b (master)
+$
